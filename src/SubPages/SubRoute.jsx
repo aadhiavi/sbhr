@@ -1,6 +1,5 @@
 import React from 'react';
-import ImageSlider from '../Files/ImageSlider/ImageSlider';
-import { dineDetails, imageSlides, stayDetails, weddingHalls } from '../Files/Store/Store';
+import { dineDetails, stayDetails, weddingHalls } from '../Files/Store/Store';
 
 function SubRoute({ route, heading }) {
     const details = stayDetails[route];

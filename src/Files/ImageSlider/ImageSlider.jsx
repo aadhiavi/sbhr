@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import "./ImageSlider.css"
+import "./ImageSlider.css";
 
 const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
-  };
+  }, [images.length]); 
 
   useEffect(() => {
     const intervalId = setInterval(nextSlide, 3000);
     return () => clearInterval(intervalId);
-  }, [images.length]);
+  }, [images.length, nextSlide]);
 
   return (
     <div className="slider">
@@ -32,4 +32,5 @@ const ImageSlider = ({ images }) => {
 };
 
 export default ImageSlider;
+
 
