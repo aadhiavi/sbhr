@@ -38,49 +38,48 @@
     align-items: center;
     width: 100%;
     padding-top: 10px;
+}
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    nav {
+    ul {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        gap: 25px;
 
-        ul {
-            display: flex;
-            gap: 25px;
+        li {
+            list-style: none;
 
-            li {
-                list-style: none;
+            a {
+                color: white;
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
 
-                a {
-                    color: white;
-                    font-size: 1.1rem;
-                    font-weight: 500;
-                }
+            a.active {
+                color: rgb(235, 156, 66);
+                position: relative;
+                width: max-content;
+                padding: 7px 0;
+                transition: 150ms;
+            }
 
-                a.active {
-                    color: rgb(235, 156, 66);
-                    position: relative;
-                    width: max-content;
-                    padding: 7px 0;
-                    transition: 150ms;
-                }
-
-                a.active::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    bottom: 0;
-                    left: 0;
-                    height: 3px;
-                    border-radius: 20px;
-                    background-color: white;
-                    transition: 150ms;
-                }
+            a.active::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                border-radius: 20px;
+                background-color: white;
+                transition: 150ms;
             }
         }
-
     }
+
 }
 
 a {
@@ -222,34 +221,33 @@ a {
         transition: 0.4s all ease-in-out;
         padding-top: 50px;
         backdrop-filter: blur(2px);
+   
+    }
 
-        nav {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .social-burger {
             display: flex;
-            flex-direction: column;
-            gap: 40px;
-
-            .social-burger {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-                margin-top: 30px;
-            }
-
-            .enquiry {
-                flex-direction: column;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-            }
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 30px;
         }
 
-        ul{
+        .enquiry {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        ul {
             flex-direction: column;
         }
     }
-
     .active {
         right: 0vw;
     }
