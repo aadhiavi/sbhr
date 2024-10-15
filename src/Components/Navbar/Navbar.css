@@ -37,49 +37,50 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 10PX;
-}
+    padding-top: 10px;
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    ul {
+    nav {
         display: flex;
-        gap: 25px;
+        justify-content: center;
+        align-items: center;
 
-        li {
-            list-style: none;
+        ul {
+            display: flex;
+            gap: 25px;
 
-            a {
-                color: white;
-                font-size: 1.1rem;
-                font-weight: 500;
-            }
+            li {
+                list-style: none;
 
-            a.active {
-                color: rgb(235, 156, 66);
-                position: relative;
-                width: max-content;
-                padding: 7px 0;
-                transition: 150ms;
-            }
+                a {
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
 
-            a.active::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-                height: 3px;
-                border-radius: 20px;
-                background-color: white;
-                transition: 150ms;
+                a.active {
+                    color: rgb(235, 156, 66);
+                    position: relative;
+                    width: max-content;
+                    padding: 7px 0;
+                    transition: 150ms;
+                }
+
+                a.active::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    height: 3px;
+                    border-radius: 20px;
+                    background-color: white;
+                    transition: 150ms;
+                }
             }
         }
-    }
 
+    }
 }
 
 a {
@@ -152,15 +153,18 @@ a {
 }
 
 @keyframes blink-color-animation {
-    0%, 100% {
-      opacity: 1;
-      background-color: rgba(255, 255, 255, 0.247);
+
+    0%,
+    100% {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.247);
     }
+
     50% {
-      opacity: 1;
-      background-color:  rgb(255, 0, 0);
+        opacity: 1;
+        background-color: rgb(255, 0, 0);
     }
-  }
+}
 
 .quote:hover {
     border: 1px solid rgb(255, 170, 0);
@@ -241,8 +245,7 @@ a {
             }
         }
 
-        ul {
-            display: flex;
+        ul{
             flex-direction: column;
         }
     }
