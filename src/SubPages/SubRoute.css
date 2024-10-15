@@ -1,0 +1,52 @@
+.top{
+    margin-top: 12vh;
+   
+}
+.section {
+    .left {
+        background-color: white;
+
+        .image-slider {
+            border-radius: 0;
+        }
+
+        .content {
+            width: auto;
+            padding: 0 10px;
+            align-items: start;
+            
+        }
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 100px;
+
+        h1,
+        p {
+            margin: 35px;
+        }
+
+        h1 {
+            color: #a32136;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .section {
+        
+        .head {
+            padding: 0 20px;
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}

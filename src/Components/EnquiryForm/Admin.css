@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.aboutus-container {
+    width: 280px;
+    background: transparent;
+    color: rgb(121, 82, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    backdrop-filter: blur(50px);
+    h3 {
+        margin: 0;
+        font-family: "Jost", sans-serif;
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        label {
+            font-size: 13px;
+            font-weight: 500;
+            font-family: "Jost", sans-serif;
+        }
+
+        input {
+            padding: 8px;
+            width: 250px;
+            font-size: 17px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            font-family: "Jost", sans-serif;
+            color: #ffffff;
+        }
+        select{
+            padding: 8px;
+            width: 250px;
+            font-size: 17px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            font-family: "Jost", sans-serif;
+            color: #8b8b8b; 
+            option{
+                color: black;
+            }
+        }
+
+        textarea {
+            height: 120px;
+            padding: 8px;
+            width: 250px;
+            font-size: 17px;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 1px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            font-family: "Jost", sans-serif;
+            overflow: hidden;
+
+        }
+
+        button {
+            font-family: "Jost", sans-serif;
+            padding: 6px 25px;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(255, 255, 255);
+            background: transparent;
+            cursor: pointer;
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgb(148, 148, 148);
+        }
+
+        input:hover, textarea:hover {
+            backdrop-filter: blur(50px);
+            background-color: #83838365;
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+.error {
+    color: rgb(255, 0, 0);
+}
+
+.overlay-enquiry {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(104, 104, 104, 0.856);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.overlay-content-msg {
+    border: 1px solid rgb(134, 134, 134);
+    min-height: 100px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    p {
+        color: rgb(255, 255, 255);
+    }
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+
+.overlay-model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.534);
+
+}
+
+.overlay-model .model-model {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    padding-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    line-height: 1.4;
+}
+
+.overlay-model .model-model .cross-model {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+   
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #363636;
+    color: white;
+  }
+
+/* Custom styles for selected dates */
+.react-datepicker__day--selected {
+    background-color: red !important;
+    color: white !important;
+}
+ 
+/* Custom styles for dates within the selectable range (from today) */
+.react-datepicker__day--in-selecting-range {
+    background-color: green !important;
+    color: white !important;
+}
+ 
+/* Custom styles for disabled dates (past dates) */
+.react-datepicker__day--disabled {
+    color: #d3d3d3 !important;
+    cursor: not-allowed;
+}
+ 
+/* Optional: Highlight the selected date range */
+.react-datepicker__day--in-range {
+    background-color: rgba(0, 128, 0, 0.3) !important; 
+}
+ 
+/* Optional: Customize the hover effect for dates */
+.react-datepicker__day:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+}
+ 
+/* Styles for booked dates */
+.react-datepicker__day--disabled {
+    background-color: red !important;
+    color: white !important;
+    cursor: not-allowed;
+}
+ 
+/* Styles for selectable dates */
+.react-datepicker__day {
+    border-radius: 50%;
+}
+ 
+/* Optional: Highlight dates in the range */
+.react-datepicker__day--in-range {
+    background-color: rgba(0, 128, 0, 0.3) !important; 
+}
+ 
+/* Optional: Customize hover effect */
+.react-datepicker__day:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important; 
+}
