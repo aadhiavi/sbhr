@@ -31,7 +31,7 @@ const Admin = () => {
         setOverlayVisible(false); 
 
         try {
-            const response = await axios.post('http://localhost:5000/api/v1/add-connect', formData);
+            const response = await axios.post('https://sbhr-back-1.onrender.com/api/v1/add-connect', formData);
             setSuccess(response.data.message);
             setOverlayVisible(true); 
             setError('');

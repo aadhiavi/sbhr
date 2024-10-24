@@ -1,42 +1,16 @@
-import Img1 from "../../Assets/ss-deligate.png";
-import Img2 from "../../Assets/ss-excutive.jpg";
-import Img3 from "../../Assets/ss-dormitory2.png";
-import Img4 from "../../Assets/bethany.jpg";
-import Img5 from "../../Assets/Bethlehem.jpg";
-import Img6 from "../../Assets/BurningBush.jpg";
-import Img7 from "../../Assets/Cairo Museum.jpg";
-import Img8 from "../../Assets/Cairo.jpg";
-import Img9 from "../../Assets/Canaan.jpg";
 import { SectionBody } from "../../MainPages/Components/HomeBody";
 import { GunterStay, GunturDine, GunturEvents, HydDine, HydStay, HydEvents} from "../../MainPages/Components/HomeContent";
 import { GntrDineImages, GntrEveImages, GntrStayImages, HydDineImages, HydEveImages, HydStayImages} from "./ImagesStore";
 import '../../SubPages/SubRoute.css'
 import Footer from "../../Components/Footer/Footer";
 
-export const imageSlides = {
-  hyderabad: [
-    Img1,
-    Img2,
-    Img3
-  ],
-  guntur: [
-    Img4,
-    Img5,
-    Img6
-  ],
-  bangalore: [
-    Img7,
-    Img8,
-    Img9
-  ]
-};
 
 export const SbhrFooter = {
   subline: "SBHR Suhana Beulah Hotels and Resorts manages both Samadhana Sadhan and Samaikyatha Sadhan, offering large Christian resorts and versatile convention halls. Their expertise ensures exceptional wedding retreats and event experiences. With a focus on elegance and serenity, they create memorable gatherings for every occasion.",
   address: "Plot No 128, Gate Number 6, Sitaram Nagar, Gunrock Enclave, Secunderabad, Telangana 500009",
-  number: "+91 9347905709",
-  email1: "info@samadhanasadan.com",
-  email2: "info@samadhanasadan.com",
+  number: "+91 7793979849",
+  email1: "arthi@tradesyndicate.in",
+  email2: "sbhrhyd@gmail.com",
   mapSrc: "https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d336.40208977723216!2d78.49508776037399!3d17.461859078468652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x3bcb9be4b194fbcf%3A0x620048d26732a53d!3m2!1d17.4618616!2d78.4953422!4m5!1s0x3bcb9be4b194fbcf%3A0x620048d26732a53d!2sTrade%20Syndicate%20Corporate%20office%2C%20Plot%20No%20128%2C%20Gate%20Number%206%2C%20Sitaram%20Nagar%2C%20Gunrock%20Enclave%2C%20Secunderabad%2C%20Telangana%20500009!3m2!1d17.4618616!2d78.4953422!5e0!3m2!1sen!2sin!4v1728539257457!5m2!1sen!2sin"
 }
 export const HydFooter = {
@@ -114,8 +88,7 @@ export const dineDetails = {
     description:
       <div className="top">
         <SectionBody images={GntrDineImages[0]} content={GunturDine[0].content} />
-        <SectionBody images={GntrDineImages[1]} content={GunturDine[1].content} />
-        <SectionBody images={GntrDineImages[2]} content={GunturDine[2].content} />
+        <SectionBody images={GntrDineImages[1]} content={GunturDine[2].content} />
         <Footer {...GntrFooter} />
       </div>,
     popularRestaurants: [

@@ -5,6 +5,8 @@ import './MainRoute.css';
 import Hyderabad from './Components/Hyderabad';
 import Guntur from './Components/Guntur';
 import Bangalore from './Components/Bangalore';
+import samaikya from '../Assets/gg.jpg'
+import sama from '../Assets/samadhana.jpg'
 
 const headings = ['Stay', 'Dine', 'Wedding&Events'];
 
@@ -24,6 +26,10 @@ const MainRoute = ({ route }) => {
         'bangalore': 'Welcome to SBHR Bangalore',
         'pondicherry': 'Welcome to SBHR Pondicherry'
     }[route];
+    const introImage = {
+        'hyderabad': sama,
+        'guntur': samaikya,
+    }[route];
 
     const isSubRoute = headings.some(heading => location.pathname.endsWith(heading));
 
@@ -38,7 +44,13 @@ const MainRoute = ({ route }) => {
                     ))}
                 </ul>
             </nav>
+
             <div className='mini-heading'>
+                {!isSubRoute &&
+                    <div className='main-image'>
+                        <img src={introImage} alt="" />
+                    </div>
+                }
                 {!isSubRoute &&
                     <div className='heading-main'>
                         <h1>{mainRouteName}</h1>

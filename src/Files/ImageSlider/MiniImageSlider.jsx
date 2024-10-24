@@ -17,16 +17,7 @@ const MiniImageSlider = ({ images, interval = 3000 }) => {
   return (
     <div className="slider">
       <div className="slider-images">
-        <div style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
-          display: "flex",
-          transition: "transform 0.5s ease-in-out"
-        }}
-        >
-          {images.map((image, index) => (
-            <img key={index} src={image} alt={`Slide ${index}`} />
-          ))}
-        </div>
+        <img src={images[currentIndex]} alt="Slide" />
       </div>
     </div>
   );

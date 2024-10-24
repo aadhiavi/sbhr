@@ -62,7 +62,7 @@ const Footer = ({ subline, address, number, email1, email2, mapSrc }) => {
                 </div>
             </footer>
             <div className="copyright">
-                Copyright ©2024 All rights reserved
+                 ©2024 All rights reserved SBHR Hyderabad
                 <Visit/>
                 <span>
                     <a href='https://www.instagram.com/samadhanasadan/' >
@@ -71,7 +71,7 @@ const Footer = ({ subline, address, number, email1, email2, mapSrc }) => {
                     <a href='https://www.facebook.com/profile.php?id=61558738804342'>
                         <FaInstagram />
                     </a>
-                    <a href="https://www.youtube.com/@samadhanasadan">
+                    <a href="https://www.youtube.com/channel/UCVA1BWF9CHKvrGgt_kXwBTA">
                         <FaYoutube />
                     </a>
                 </span>

@@ -31,7 +31,7 @@ const AdminPanel = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/v1/get/${currentCity}`);
+                const response = await axios.get(`https://sbhr-back-1.onrender.com/api/v1/get/${currentCity}`);
                 setSubmittedData(response.data);
 
                 const booked = response.data.map(item => ({
@@ -77,15 +77,15 @@ const AdminPanel = () => {
             };
 
             if (editingId) {
-                await axios.put(`http://localhost:5000/api/v1/update/${editingId}`, formattedValues);
+                await axios.put(`https://sbhr-back-1.onrender.com/api/v1/update/${editingId}`, formattedValues);
                 setOverlayMessage("Data updated successfully!");
             } else {
-                await axios.post(`http://localhost:5000/api/v1/post/${currentCity}`, formattedValues);
+                await axios.post(`https://sbhr-back-1.onrender.com/api/v1/post/${currentCity}`, formattedValues);
                 setOverlayMessage("Data submitted successfully!");
             }
 
             setOverlayVisible(true);
-            const updatedResponse = await axios.get(`http://localhost:5000/api/v1/get/${currentCity}`);
+            const updatedResponse = await axios.get(`https://sbhr-back-1.onrender.com/api/v1/get/${currentCity}`);
             setSubmittedData(updatedResponse.data);
             const updatedBookedDates = updatedResponse.data.map(item => ({
                 start: new Date(item.start),
@@ -110,10 +110,10 @@ const AdminPanel = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/v1/delete/${id}`);
+            await axios.delete(`https://sbhr-back-1.onrender.com/api/v1/delete/${id}`);
             setOverlayMessage("Data deleted successfully!");
             setOverlayVisible(true);
-            const updatedResponse = await axios.get(`http://localhost:5000/api/v1/get/${currentCity}`);
+            const updatedResponse = await axios.get(`https://sbhr-back-1.onrender.com/api/v1/get/${currentCity}`);
             setSubmittedData(updatedResponse.data);
             const updatedBookedDates = updatedResponse.data.map(item => ({
                 start: new Date(item.start),

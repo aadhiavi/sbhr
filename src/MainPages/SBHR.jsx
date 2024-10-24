@@ -4,19 +4,32 @@ import { dining, halls, open, rooms } from '../Files/Store/ImagesStore';
 import { Link } from 'react-router-dom';
 import MiniImageSlider from '../Files/ImageSlider/MiniImageSlider';
 import vd from '../Assets/vd7.mp4';
-import Op2 from '../Assets/ss-tank.png';
+import Op2 from '../Assets/Hyd/ss-tank (1).jpg';
 import Footer from '../Components/Footer/Footer';
 import { SbhrFooter } from '../Files/Store/Store';
 import parking from '../Assets/par.jpg'
 import Addition from './SBHR-components/Addition';
-
+import Resorts from './SBHR-components/Resorts';
+import { FaChevronDown } from "react-icons/fa6";
+import Testimonies from './SBHR-components/Testimonies';
+import Aments from './SBHR-components/Aments';
 
 
 const SBHR = () => {
+    const scrollToPosition = () => {
+        window.scrollTo({
+            top: 650,
+            behavior: 'smooth',
+        });
+    };
     return (
         <div className='home'>
             <div className="HomeSliderVideo">
                 <video src={vd} muted autoPlay loop />
+                <span className='dotted'></span>
+                <div onClick={scrollToPosition} className='down'>
+                    <FaChevronDown className='down-arrow' />
+                </div>
             </div>
 
             <div className='intro'>
@@ -24,6 +37,19 @@ const SBHR = () => {
                 </div>
                 <p>Suhana Beulah Hotels and Resorts features Samadhana Sadhan and Samaikyatha Sadhan, year-round conference and retreat centers in a serene, pollution-free environment. Catering to Christian groups and ministries across India, these venues accommodate 10 to 1,000 people, with comfortable hotel-style lodging. Guests can enjoy recreational activities and savor local cuisine, including Hyderabadi Biryani and South Indian specialties. With a focus on elegance and memorable experiences, expert event coordinators assist in planning every detail for productive retreats. For more information or to schedule a tour, please visit the website or contact the event coordinator directly.</p>
             </div>
+            <Addition />
+            <Resorts />
+            <div className="mapping">
+                <div className="map-view">
+                    <iframe title='map' src="https://www.google.com/maps/d/u/0/embed?mid=1bRGssm0-lqKDyt4zS3ugDkxAgGDuhx4&ehbc=2E312F&noprof=1" ></iframe>
+                </div>
+                <div className="branches">
+                    <h2>Our Promise</h2>
+                    <p>Discover our stunning beachfront resorts, versatile convention halls, and enchanting hill station retreats, where luxury and functionality converge. Our beachfront resorts offer serene getaways with breathtaking ocean views, modern amenities, and recreational activities for relaxation. The hill station locations provide a refreshing escape with cool breezes and picturesque landscapes, perfect for nature lovers. Meanwhile, our convention halls feature state-of-the-art technology and customizable spaces, ideal for any event. With professional support and exceptional catering, we ensure every detail is covered. Experience the perfect backdrop for your next escape or gathering with us!</p>
+                </div>
+            </div>
+
+
             <div className="grid-images">
                 <div className='filter'></div>
                 <h2>Our Facilities</h2>
@@ -61,15 +87,15 @@ const SBHR = () => {
                             </div>
                         </div>
                     </Link>
-                        <div className="box">
-                            <div className="image-container">
-                                <MiniImageSlider images={open} />
-                            </div>
-                            <div className='box-info'>
-                                <h3>Outdoor Events,Lawn,Open Theatre</h3>
-                                <p>Starting from <button>Rs:000000/-</button></p>
-                            </div>
+                    <div className="box">
+                        <div className="image-container">
+                            <MiniImageSlider images={open} />
                         </div>
+                        <div className='box-info'>
+                            <h3>Outdoor Events,Lawn,Open Theatre</h3>
+                            <p>Starting from <button>Rs:000000/-</button></p>
+                        </div>
+                    </div>
                     <div className="box">
                         <div className="image-container">
                             <img src={Op2} alt="" />
@@ -90,7 +116,8 @@ const SBHR = () => {
                     </div>
                 </div>
             </div>
-            <Addition />
+            <Aments/>
+            <Testimonies />
             <Footer {...SbhrFooter} />
         </div>
     )

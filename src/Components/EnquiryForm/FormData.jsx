@@ -25,7 +25,7 @@ const FormData = () => {
 
     const fetchConnections = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/v1/get-connect');
+            const response = await axios.get('https://sbhr-back-1.onrender.com/api/v1/get-connect');
             setConnections(response.data.data);
         } catch (error) {
             console.error('Error fetching connections:', error);
@@ -49,8 +49,8 @@ const FormData = () => {
 
         try {
             const url = isUpdating 
-                ? `http://localhost:5000/api/v1/update-connect/${updateId}` 
-                : 'http://localhost:5000/api/v1/add-connect';
+                ? `https://sbhr-back-1.onrender.com/api/v1/update-connect/${updateId}` 
+                : 'https://sbhr-back-1.onrender.com/api/v1/add-connect';
             const method = isUpdating ? 'put' : 'post';
             const response = await axios[method](url, formData);
             
@@ -71,7 +71,7 @@ const FormData = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/v1/delete-connect/${id}`);
+            await axios.delete(`https://sbhr-back-1.onrender.com/api/v1/delete-connect/${id}`);
             fetchConnections();
         } catch (error) {
             console.error('Error deleting connection:', error);

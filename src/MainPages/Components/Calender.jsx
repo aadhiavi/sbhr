@@ -15,7 +15,7 @@ const CityCalendar = () => {
     useEffect(() => {
         const fetchContacts = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/v1/get/${city}`);
+                const response = await axios.get(`https://sbhr-back-1.onrender.com/api/v1/get/${city}`);
                 const contacts = response.data;
 
                 const dates = contacts.flatMap(contact => {

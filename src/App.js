@@ -14,6 +14,7 @@ import Events from './MainPages/SBHR-components/Events';
 import ScrollgToTop from './Components/ScrollgToTop';
 import Dining from './MainPages/SBHR-components/Dining';
 import FormData from './Components/EnquiryForm/FormData';
+import Career from './MainPages/SBHR-components/Career';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/dining' element={<Dining />} />
           <Route path='/admin-panel' element={<AdminPanel />} />
           <Route path='/admin' element={<FormData />} />
+          <Route path='/careers' element={<Career />} />
         </Routes>
         <div className="contact-info">
           <a href='tel:+91-7799234560'>
@@ -43,7 +45,7 @@ function App() {
           <a href='https://www.facebook.com/profile.php?id=61558738804342'>
             <img style={{ width: '37px', height: '37px' }} src={Facebook} alt='Facebook' />
           </a>
-          <a href='https://maps.google.com' target='_blank' rel='noopener noreferrer'>
+          <a href='https://maps.app.goo.gl/QLqdVP6Xxtbe3xsX8' target='_blank' rel='noopener noreferrer'>
             <img style={{ width: '34px', height: '34px' }} src={maps} alt='Google Maps' />
           </a>
         </div>

@@ -19,6 +19,9 @@
         justify-content: flex-start;
         gap: 20px;
         align-items: center;
+        a{
+            color: white;
+        }
         a:hover{
             color: red;
         }

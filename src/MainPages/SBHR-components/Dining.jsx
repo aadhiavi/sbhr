@@ -2,6 +2,8 @@ import React from 'react';
 import './SBHRCompo.css';
 import ImageSlider from '../../Files/ImageSlider/ImageSlider';
 import { dine } from '../../Files/Store/ImagesStore';
+import Footer from '../../Components/Footer/Footer';
+import { SbhrFooter } from '../../Files/Store/Store';
 
 const Dining = () => {
     return (
@@ -47,6 +49,7 @@ const Dining = () => {
                     <li><strong>Buffet and A La Carte Options:</strong> Flexibility in dining styles based on guest preferences.</li>
                 </ul>
             </div>
+            <Footer {...SbhrFooter} />
         </div>
     )
 }

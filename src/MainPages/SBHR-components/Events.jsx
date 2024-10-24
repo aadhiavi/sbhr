@@ -2,6 +2,8 @@ import React from 'react';
 import './SBHRCompo.css';
 import ImageSlider from '../../Files/ImageSlider/ImageSlider';
 import { eventHalls } from '../../Files/Store/ImagesStore';
+import Footer from '../../Components/Footer/Footer';
+import { SbhrFooter } from '../../Files/Store/Store';
 
 const Events = () => {
   return (
@@ -51,6 +53,7 @@ const Events = () => {
                   <li><strong>Catering Options:</strong> Catering services for coffee breaks, lunches, or receptions.</li>
               </ul>
           </div>
+          <Footer {...SbhrFooter} />
     </div>
   );
 };

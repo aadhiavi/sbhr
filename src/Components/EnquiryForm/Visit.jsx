@@ -7,7 +7,7 @@ const Visit = () => {
     useEffect(() => {
         const countVisitors = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/v1/visit');
+                const response = await axios.get('https://sbhr-back-1.onrender.com/api/v1/visit');
                 setCount(response.data.count);
             } catch (error) {
                 console.error("Error fetching visitor count", error);
