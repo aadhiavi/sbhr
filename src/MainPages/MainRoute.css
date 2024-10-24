@@ -97,20 +97,18 @@
     .map-view {
         margin-top: -50px;
         height: 80vh;
-        width: 55%;
 
         iframe {
             border: none;
             outline: none;
             height: 100%;
-            width: 100%;
+            width: 700px;
         }
     }
 
     .branches {
         margin-top: -50px;
         background-color: rgb(185, 205, 251);
-        width: 45%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -208,14 +206,19 @@
 
         .map-view {
             height: 500px;
-            width: 100%;
+            iframe {
+                border: none;
+                outline: none;
+                height: 100%;
+                width: 100%;
+            }
         }
 
         .branches {
             margin-top: 0px;
             width: 100%;
             align-items: flex-start;
-            padding: 30px 10px;
+            padding: 50px 10px;
 
             p {
                 font-size: 14px;

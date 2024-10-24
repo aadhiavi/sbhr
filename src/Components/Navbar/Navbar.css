@@ -38,115 +38,114 @@
         align-items: center;
         width: 100%;
         padding-top: 10px;
-    }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        ul {
-            display: flex;
-            gap: 25px;
-
-            li {
-                list-style: none;
-
-                a {
-                    color: white;
-                    font-size: 1.1rem;
-                    font-weight: 500;
-                }
-
-                a.active {
-                    color: rgb(235, 156, 66);
-                    position: relative;
-                    width: max-content;
-                    padding: 7px 0;
-                    transition: 150ms;
-                }
-
-                a.active::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    bottom: 0;
-                    left: 0;
-                    height: 3px;
-                    border-radius: 20px;
-                    background-color: white;
-                    transition: 150ms;
-                }
-            }
-        }
-
-    }
-
-    a {
-        color: white;
-    }
-
-    .btn-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        button {
-            all: unset;
-            font-size: 0.8rem;
-            color: rgb(31, 31, 31);
-            padding: 9px 20px;
-            font-weight: 500;
-            background: linear-gradient(to right, #B19CD7, #C0AFE2, #CEC2EB, #DDD5F3, #EBE8FC);
-            box-shadow: 10px 1px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: linear-gradient(to right, #895cdc, #9c7ae0, #9e85d8, #ad9ddb, #e4e0f7);
-        }
-    }
-
-    .btn-btn button:hover {
-        background-color: goldenrod;
-    }
-
-    .social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-
-        .call {
-            background-color: rgba(255, 255, 255, 0.247);
+        .main-nav {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-            color: #ffffff;
-            transition: 150ms;
+
+            ul {
+                display: flex;
+                gap: 25px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: white;
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                    }
+
+                    a.active {
+                        color: rgb(235, 156, 66);
+                        position: relative;
+                        width: max-content;
+                        padding: 7px 0;
+                        transition: 150ms;
+                    }
+
+                    a.active::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
+                        height: 3px;
+                        border-radius: 20px;
+                        background-color: white;
+                        transition: 150ms;
+                    }
+                }
+            }
+
         }
 
-        .cal1:hover {
-            background-color: white;
-            color: #007bff;
-            transition: 150ms;
+
+        a {
+            color: white;
         }
 
-        .cal2:hover {
-            background-color: white;
-            color: #ff0000;
-            transition: 150ms;
+        .btn-btn {
+            display: flex;
+
+            button {
+                all: unset;
+                font-size: 0.8rem;
+                color: rgb(31, 31, 31);
+                padding: 9px 20px;
+                font-weight: 500;
+                background: linear-gradient(to right, #B19CD7, #C0AFE2, #CEC2EB, #DDD5F3, #EBE8FC);
+                box-shadow: 10px 1px 15px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: linear-gradient(to right, #895cdc, #9c7ae0, #9e85d8, #ad9ddb, #e4e0f7);
+            }
         }
 
-        .cal3:hover {
-            background-color: white;
-            color: #0b8902;
-            transition: 150ms;
+        .btn-btn button:hover {
+            background-color: goldenrod;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .call {
+                background-color: rgba(255, 255, 255, 0.247);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: 150ms;
+            }
+
+            .cal1:hover {
+                background-color: white;
+                color: #007bff;
+                transition: 150ms;
+            }
+
+            .cal2:hover {
+                background-color: white;
+                color: #ff0000;
+                transition: 150ms;
+            }
+
+            .cal3:hover {
+                background-color: white;
+                color: #0b8902;
+                transition: 150ms;
+            }
         }
     }
 
@@ -236,7 +235,7 @@
 
         .menu {
             position: absolute;
-            height: 500px;
+            height: 550px;
             width: 320px;
             z-index: 2;
             top: 0vh;
@@ -246,34 +245,45 @@
             transition: 0.4s all ease-in-out;
             padding-top: 50px;
             backdrop-filter: blur(2px);
+            .main-nav {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+    
+                .social-burger {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    margin-top: 30px;
+                }
+    
+                .enquiry {
+                    flex-direction: column;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+    
+                ul {
+                    flex-direction: column;
+                    gap: 15px;
+                    li{
+                        a{
+                            font-size: 30px;
+                        }
+                    }
+                }
+                
+            }
+            .btn-btn{
+                margin-top: 20px;
+            }
 
         }
 
-        nav {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-
-            .social-burger {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-                margin-top: 30px;
-            }
-
-            .enquiry {
-                flex-direction: column;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-            }
-
-            ul {
-                flex-direction: column;
-            }
-        }
+       
 
         .active {
             right: 0vw;

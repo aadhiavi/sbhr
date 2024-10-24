@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
         
         <div className={click ? 'menu active' : 'menu'}>
-          <nav onClick={handleMenuItemClick}>
+          <div className='main-nav' onClick={handleMenuItemClick}>
             <ul>
               <li><NavLink to='/hyderabad'>Hyderabad</NavLink></li>
               <li><NavLink to='/guntur'>Guntur</NavLink></li>
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-          </nav>
+          </div>
 
           <div className='social'>
             <a className='call cal1' href='tel:+91-7793979849'>
@@ -89,10 +89,13 @@ const Navbar = () => {
               <RiWhatsappFill size={18} />
             </a>
           </div>
+
           <div className='btn-btn'>
             <button onClick={handleClickModel}>ENQUIRY</button>
           </div>
+
         </div>
+        
         <div className='hamburger' onClick={handleClick}>
           {click ? <MdClose style={{ color: 'white' }} size={30} /> : <BsListNested style={{ color: 'white' }} size={30} />}
         </div>
