@@ -117,7 +117,8 @@ export const halls = [h1, h2, h3, h4, h5, h6];
 export const dining = [d1, d2, d3, d4, d5, d6];
 export const open = [Op1, Op2, Op3, Op4];
 
-
+export const Hyd = [rm1, rm2, rm3, rm4, rm5, d1, d2, d3,h1, h2, h3, h4, h5]
+export const Gntr = [ gstay3, gstay9, gstay4, gstay6,gdine1, gdine3, gdine2, geve1, geve7, geve6, geve8, geve10];
 
 
 export const HydImages = [

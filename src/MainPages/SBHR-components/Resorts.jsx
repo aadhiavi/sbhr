@@ -11,6 +11,7 @@ import video1 from '../../Assets/ssvdo.mp4'
 import video2 from '../../Assets/gntrVdo.mp4'
 import { Link } from 'react-router-dom';
 import Model from '../../Components/EnquiryForm/Model';
+import { Gntr, Hyd } from '../../Files/Store/ImagesStore';
 
 
 const Resorts = () => {
@@ -41,7 +42,7 @@ const Resorts = () => {
             line2: "christian resort centre and most exclusive use venues in Hyderabad",
             line3: "The only christian resort centre and one of the most exclusive use venues in Hyderabad near Shameerpet. Whether you are planning a wedding, a birthday party, an anniversary celebration, an overnight retreat or any other christian event, the stunning backdrop of Samadhana Sadan provides a majestic setting, with 12 acres of private countryside for guests to enjoy",
             link: "/hyderabad",
-            photos: [img, img, img, img, img],
+            photos: Hyd,
             vdo: video1,
         },
         {
@@ -50,7 +51,7 @@ const Resorts = () => {
             line2: "christian resort centre and most exclusive use venues in Guntur",
             line3: "The only christian resort centre and one of the most exclusive use venues in Guntur near Chowdavaram Whether you are planning a wedding, a birthday party, an anniversary celebration, an overnight retreat or any other christian event, the stunning backdrop of Samaikyatha Sadan provides a majestic setting, with 12 acres of private countryside for guests to enjoy",
             link: "/guntur",
-            photos: [img, img, img, img, img],
+            photos: Gntr,
             vdo: video2,
         },
         {

@@ -483,7 +483,7 @@
 
   .slide-container {
     width: 750px;
-    height: auto;
+    height: 450px;
     display: flex;
     position: relative;
 
@@ -554,6 +554,7 @@
   transition: ease-in 0.5s;
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .active {
@@ -604,6 +605,11 @@
     width: 100%;
   }
 }
+@media(max-width:1440px) {
+  .dot {
+    width: 70px;
+  }
+}
 
 @media(max-width:1024px) {
   .gallaryimg .slide-container {
@@ -611,7 +617,7 @@
   }
 
   .dot {
-    width: 70px;
+    width: 50px;
   }
 }
 
@@ -622,7 +628,7 @@
   }
 
   .dot {
-    width: 35px;
+    width: 17px;
   }
 }
 
