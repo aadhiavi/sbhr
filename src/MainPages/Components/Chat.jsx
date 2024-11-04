@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import './Chat.css';
 import { MdClose } from 'react-icons/md';
@@ -31,11 +31,11 @@ const Chat = () => {
     setMessages(welcomeMessages.map(msg => ({ botResponse: msg })));
   };
 
-  const fetchMessages = async () => {
+  const fetchMessages = useCallback(async () => {
     try {
       const response = await axios.get('https://sbhr-back-1.onrender.com/api/v1/messages');
       const fetchedMessages = response.data;
-
+  
       if (fetchedMessages.length === 0) {
         setWelcomeMessage();
       } else {
@@ -44,7 +44,8 @@ const Chat = () => {
     } catch (error) {
       console.error("Error fetching messages:", error);
     }
-  };
+  }, []);
+  
 
   const sendMessage = async () => {
     if (!input) return;
@@ -80,7 +81,8 @@ const Chat = () => {
 
   useEffect(() => {
     fetchMessages();
-  }, []);
+  }, [fetchMessages]);
+  
 
   useEffect(() => {
     scrollToBottom();
