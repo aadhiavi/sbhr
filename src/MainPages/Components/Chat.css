@@ -253,3 +253,6 @@
 .icon-chat-inactive{
   display: none;
 }
+li{
+  list-style: none;
+}

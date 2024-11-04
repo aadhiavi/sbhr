@@ -3,7 +3,7 @@ import React from 'react'
 const Aments = () => {
     return (
         <div className='main-ament-class'>
-            <h1>Amenties</h1>
+            <h1>Amenities</h1>
             <div className='amenties'>
 
                 <div className="ament ament1">

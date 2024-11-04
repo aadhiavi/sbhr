@@ -1,5 +1,5 @@
 .slideshow {
-  height: 90vh;
+  height: 100vh;
   padding-top: 60px;
 }
 
@@ -23,8 +23,8 @@
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   ul {
@@ -37,24 +37,43 @@
     padding-right: 8px;
   }
 
+  ul li{
+    font-size: 0.8rem;
+    line-height: 1.5;
+  } 
   ul li strong {
     color: #0056a7;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 768px) {
   .slideshow {
-    height: 40vh;
+    height: 70vh;
   }
 
   .fecilities {
-    h1 {
-      font-size: 2rem;
-    }
 
     h2 {
       font-size: 1.5rem;
+    }
+    h3{
+      font-size: 1.3;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .slideshow {
+    height: 50vh;
+  }
+
+  .fecilities {
+
+    h2 {
+      font-size: 1.2rem;
+    }
+    h3{
+      font-size: 1rem;
     }
   }
 }
