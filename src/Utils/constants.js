@@ -1,0 +1,1 @@
+export const BASE_URL = "https://sbhr-back-1.onrender.com"

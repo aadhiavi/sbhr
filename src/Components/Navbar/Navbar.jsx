@@ -42,7 +42,7 @@ const Navbar = () => {
             <img src={logo} alt='Company Logo' />
           </NavLink>
           <NavLink to='/'>
-            <TfiHome className='home-icon'/>
+            <TfiHome className='home-icon' style={{color:'white'}}/>
           </NavLink>
           <span className='quote' onClick={handleClickModel}>GET A QUOTE</span>
         </div>
