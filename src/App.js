@@ -23,7 +23,6 @@ import Chat from './MainPages/Components/Chat';
 function App() {
   return (
     <>
-
       <Router>
         <ScrollgToTop>
           <Navbar />
@@ -57,8 +56,7 @@ function App() {
             </div>
           </div>
         </ScrollgToTop>
-        <Chat/>
-        {/* <iframe width="350" height="630" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/da512fc8-6d15-42f5-aaab-f653c53662dd"></iframe> */}
+        <Chat />
       </Router>
     </>
   );

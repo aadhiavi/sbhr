@@ -9,6 +9,8 @@ import img3 from '../../Assets/re (3).jpg';
 import img4 from '../../Assets/re (4).jpg';
 import { RxExternalLink } from "react-icons/rx";
 import { IoStarSharp } from "react-icons/io5";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const reviews = [
     {
@@ -58,9 +60,13 @@ const Testimonies = () => {
         return () => clearInterval(slideInterval);
     }, [isPaused, nextSlide]);
 
+    useEffect(()=>{
+        AOS.init({duration:2000});
+    })
+
     return (
         <div className='maim-class-testimony'>
-            <h2>Our Clients Say!!!</h2>
+            <h2 data-aos="fade-up">Our Clients Say!!!</h2>
             <div className="tesimonies">
                 <div className="testimonies-container" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                     {reviews.map((item, index) => (

@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Aments = () => {
+    useEffect(()=>{
+        AOS.init({duration:2000});
+    })
     return (
         <div className='main-ament-class'>
-            <h1>Amenities</h1>
+            <h1 data-aos="fade-up">Amenities</h1>
             <div className='amenties'>
 
-                <div className="ament ament1">
+                <div data-aos="fade-up" className="ament ament1">
                     <h2>In Room</h2>
                     <ul>
                         <li>Free WiFi</li>
@@ -17,7 +22,7 @@ const Aments = () => {
                         <li>Comfort amenties</li>
                     </ul>
                 </div>
-                <div className="ament">
+                <div data-aos="fade-up" className="ament">
                     <h2>In Resort</h2>
                     <ul>
                         <li>Big Lawn</li>
