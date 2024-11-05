@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './MainRoute.css';
 import { dining, halls, open, rooms } from '../Files/Store/ImagesStore';
 import { Link } from 'react-router-dom';
@@ -13,8 +13,6 @@ import Resorts from './SBHR-components/Resorts';
 import { FaChevronDown } from "react-icons/fa6";
 import Testimonies from './SBHR-components/Testimonies';
 import Aments from './SBHR-components/Aments';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 
 const SBHR = () => {
@@ -24,10 +22,6 @@ const SBHR = () => {
             behavior: 'smooth',
         });
     };
-    useEffect(()=>{
-        AOS.init({duration:2000});
-    })
-
     return (
         <div className='home'>
             <div className="HomeSliderVideo">
@@ -39,9 +33,9 @@ const SBHR = () => {
             </div>
 
             <div className='intro'>
-                <div data-aos="fade-down" className="home-line"><span></span><h2>Stay at Suhana Beulah Hotels & Resorts</h2><span></span>
+                <div className="home-line"><span></span><h2>Stay at Suhana Beulah Hotels & Resorts</h2><span></span>
                 </div>
-                <p data-aos="fade-up">Suhana Beulah Hotels and Resorts features Samadhana Sadhan and Samaikyatha Sadhan, year-round conference and retreat centers in a serene, pollution-free environment. Catering to Christian groups and ministries across India, these venues accommodate 10 to 1,000 people, with comfortable hotel-style lodging. Guests can enjoy recreational activities and savor local cuisine, including Hyderabadi Biryani and South Indian specialties. With a focus on elegance and memorable experiences, expert event coordinators assist in planning every detail for productive retreats. For more information or to schedule a tour, please visit the website or contact the event coordinator directly.</p>
+                <p>Suhana Beulah Hotels and Resorts features Samadhana Sadhan and Samaikyatha Sadhan, year-round conference and retreat centers in a serene, pollution-free environment. Catering to Christian groups and ministries across India, these venues accommodate 10 to 1,000 people, with comfortable hotel-style lodging. Guests can enjoy recreational activities and savor local cuisine, including Hyderabadi Biryani and South Indian specialties. With a focus on elegance and memorable experiences, expert event coordinators assist in planning every detail for productive retreats. For more information or to schedule a tour, please visit the website or contact the event coordinator directly.</p>
             </div>
             <Addition />
             <Resorts />
@@ -49,73 +43,73 @@ const SBHR = () => {
                 <div className="map-view">
                     <iframe title='map' src="https://www.google.com/maps/d/u/0/embed?mid=1bRGssm0-lqKDyt4zS3ugDkxAgGDuhx4&ehbc=2E312F&noprof=1" ></iframe>
                 </div>
-                <div  className="branches">
-                    <h2 data-aos="fade-up">Our Promise</h2>
-                    <p data-aos="fade-up">Discover our stunning beachfront resorts, versatile convention halls, and enchanting hill station retreats, where luxury and functionality converge. Our beachfront resorts offer serene getaways with breathtaking ocean views, modern amenities, and recreational activities for relaxation. The hill station locations provide a refreshing escape with cool breezes and picturesque landscapes, perfect for nature lovers. Meanwhile, our convention halls feature state-of-the-art technology and customizable spaces, ideal for any event. With professional support and exceptional catering, we ensure every detail is covered. Experience the perfect backdrop for your next escape or gathering with us!</p>
+                <div className="branches">
+                    <h2>Our Promise</h2>
+                    <p>Discover our stunning beachfront resorts, versatile convention halls, and enchanting hill station retreats, where luxury and functionality converge. Our beachfront resorts offer serene getaways with breathtaking ocean views, modern amenities, and recreational activities for relaxation. The hill station locations provide a refreshing escape with cool breezes and picturesque landscapes, perfect for nature lovers. Meanwhile, our convention halls feature state-of-the-art technology and customizable spaces, ideal for any event. With professional support and exceptional catering, we ensure every detail is covered. Experience the perfect backdrop for your next escape or gathering with us!</p>
                 </div>
             </div>
 
 
             <div className="grid-images">
                 <div className='filter'></div>
-                <h2 data-aos="fade-up">Our Facilities</h2>
+                <h2>Our Facilities</h2>
                 <div className="grid-box">
                     <Link to='/rooms'>
-                        <div data-aos="fade-down" className="box">
+                        <div className="box">
                             <div className="image-container">
                                 <MiniImageSlider images={rooms} />
                             </div>
-                            <div data-aos="fade-up" className='box-info'>
+                            <div className='box-info'>
                                 <h3>Executive, Deligate, Dormitory Rooms</h3>
                                 <p>Starting from <button>Rs:999 - 4,499. /-</button></p>
                             </div>
                         </div>
                     </Link>
                     <Link to='event'>
-                        <div data-aos="fade-down" className="box">
+                        <div className="box">
                             <div className="image-container">
                                 <MiniImageSlider images={halls} />
                             </div>
-                            <div data-aos="fade-up" className='box-info'>
+                            <div className='box-info'>
                                 <h3>Big Hall, Chappal, Meeting Room</h3>
                                 <p>Starting from <button>Rs:14,999 - 79,999. /-</button></p>
                             </div>
                         </div>
                     </Link>
                     <Link to='dining'>
-                        <div data-aos="fade-down" className="box">
+                        <div className="box">
                             <div className="image-container">
                                 <MiniImageSlider images={dining} />
                             </div>
-                            <div data-aos="fade-up" className='box-info'>
+                            <div className='box-info'>
                                 <h3>Dining Area</h3>
                                 <p>Starting from <button>Rs:24,999 - 49,999. /-</button></p>
                             </div>
                         </div>
                     </Link>
-                    <div data-aos="fade-down" className="box">
+                    <div className="box">
                         <div className="image-container">
                             <MiniImageSlider images={open} />
                         </div>
-                        <div data-aos="fade-up" className='box-info'>
+                        <div className='box-info'>
                             <h3>Outdoor Events,Lawn,Open Theatre</h3>
                             <p>Starting from <button>Rs:000000/-</button></p>
                         </div>
                     </div>
-                    <div data-aos="fade-down" className="box">
+                    <div className="box">
                         <div className="image-container">
                             <img src={Op2} alt="" />
                         </div>
-                        <div data-aos="fade-up" className='box-info'>
+                        <div className='box-info'>
                             <h3>Baptism Tank</h3>
                             <p>Symbolizing purification & initiation into the faith.</p>
                         </div>
                     </div>
-                    <div data-aos="fade-down" className="box">
+                    <div className="box">
                         <div className="image-container">
                             <img src={parking} alt="" />
                         </div>
-                        <div data-aos="fade-up" className='box-info'>
+                        <div className='box-info'>
                             <h3>Parking Area</h3>
                             <p>Spacious parking lot available for easy access.</p>
                         </div>

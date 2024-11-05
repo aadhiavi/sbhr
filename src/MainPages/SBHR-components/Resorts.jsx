@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './SBHRCompo.css';
 import img from '../../Assets/samadhana.jpg';
 import img1 from '../../Assets/gg.jpg'
@@ -12,8 +12,6 @@ import video2 from '../../Assets/gntrVdo.mp4'
 import { Link } from 'react-router-dom';
 import Model from '../../Components/EnquiryForm/Model';
 import { Gntr, Hyd } from '../../Files/Store/ImagesStore';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 
 const Resorts = () => {
@@ -101,20 +99,17 @@ const Resorts = () => {
         const topPosition = element.getBoundingClientRect().top + window.scrollY - 100;
         window.scrollTo({ top: topPosition, behavior: 'smooth' });
     };
-    useEffect(()=>{
-        AOS.init({duration:2000});
-    })
     return (
         <div className='companiesList'>
-            <h1 data-aos="fade-up">Our Group of Hotels & Resorts</h1>
+            <h1>Our Group of Hotels & Resorts</h1>
             <div className="companies">
                 <div className="info-images">
-                    <img data-aos="fade-up" src={list[activeIndex].pic} alt="" />
+                    <img src={list[activeIndex].pic} alt="" />
                 </div>
                 <div className="info-data" ref={infoDataRef}>
-                    <h2 data-aos="fade-right">{list[activeIndex].line1}</h2>
-                    <p data-aos="fade-left">{list[activeIndex].line3}</p>
-                    <span data-aos="zoom-in">
+                    <h2>{list[activeIndex].line1}</h2>
+                    <p>{list[activeIndex].line3}</p>
+                    <span>
                         <Link to={list[activeIndex].link}>SEE MORE</Link>
                         <Link onClick={handleClickModel}>CONTACT-US</Link>
                     </span>
