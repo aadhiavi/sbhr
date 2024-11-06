@@ -5,6 +5,7 @@ import '../../SubPages/SubRoute.css'
 import Footer from "../../Components/Footer/Footer";
 import { MdClose } from "react-icons/md";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 export const SbhrFooter = {
@@ -136,40 +137,38 @@ export const weddingHalls = {
 };
 
 
-export const Overview = ({onClose}) => {
+export const Overview = ({ onClose}) => {
   return (
-    <div className="overview">
-      <span><MdClose onClick={onClose}/></span>
+    <div onClick={onClose} className="overview">
+      <span><MdClose onClick={onClose} /></span>
+      <h3>Useful Links</h3>
       <ul>
-        <li>Large convention hall with capasity of 1000 people</li>
-        <li>Chapel with Mezzanine Floor capasity 100 to 200</li>
-        <li>Dining Hall, Open Dining Area with capasity of 600</li>
-        <li>Baptism Tank</li>
-        <li>Photoshoot Lawn</li>
-        <li>Large Parking Facilities upto 50 to 100 vehicles</li>
-        <li>Conference & Training Rooms with capasity of 100 </li>
-        <li>Open Theatre with capasity of 300 to 600</li>
-        <li>Recreation Pond</li>
-        
-      </ul>
-      <ul>
-      <li>Natural Garden</li>
-        <li> Executive Rooms - Double Occupancy</li>
-        <li>Luxury 2BHK</li>
-        <li>Delegates Rooms</li>
-        <li>4 Bedded Occupancy Rooms for Girls</li>
-        <li>4 Bedded Occupancy Rooms for Boy’s</li>
-        <li>8 bedded Occupancy Rooms</li>
-        <li>40 Bedded Occupancy Dormitory</li>
+       <li><Link to='/event'>Convention Hall (1,000 people capacity)</Link></li> 
+       <li><Link to='/event'>Chapel with Mezzanine (100-200 capacity)</Link></li>
+       <li><Link to='/dining'>Dining Hall & Open Dining Area (600 capacity)</Link></li> 
+       <li>Baptism Tank</li>
+       <li>Photoshoot Lawn</li> 
+       <li>Large Parking (50-100 vehicles)</li>
+       <li><Link to='/event'>Conference & Training Rooms (100 capacity)</Link></li>
+       <li>Open Theatre (300-600 capacity)</li>
+       <li>Recreation Pond</li> 
+       <li>Natural Garden</li>
+       <li><Link to='/rooms'>Executive Rooms (Double Occupancy)</Link></li>
+       <li><Link to='/rooms'>Luxury 2BHK</Link></li>
+       <li><Link to='/rooms'>Delegate Rooms</Link></li>
+       <li><Link to='/rooms'>4-Bedded Rooms (Girls)</Link></li>
+       <li><Link to='/rooms'>4-Bedded Rooms (Boys)</Link></li>
+       <li><Link to='/rooms'>8-Bedded Rooms</Link></li>
+       <li><Link to='/rooms'>40-Bedded Dormitory</Link></li>
       </ul>
     </div>
   )
 }
 
-export const OverviewButton = ({onClose})=>{
-  return(
+export const OverviewButton = ({ onClose }) => {
+  return (
     <div className="overview-btn">
-      <button onClick={onClose}><FaAngleRight/></button>
+      <button onClick={onClose}><FaAngleRight /></button>
     </div>
   )
 }

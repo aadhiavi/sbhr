@@ -33,7 +33,6 @@ const SBHR = () => {
         <div className='home'>
             <div className="HomeSliderVideo">
                 <video src={vd} muted autoPlay loop />
-                <span className='dotted'></span>
                 <div onClick={scrollToPosition} className='down'>
                     <FaChevronDown className='down-arrow' />
                 </div>

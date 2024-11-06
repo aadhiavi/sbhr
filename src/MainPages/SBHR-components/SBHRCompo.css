@@ -250,16 +250,18 @@
 
 /* .----------------------resorts---------------- */
 .companiesList {
-  h1 {
+  .heading-additions{
     text-align: center;
     padding: 70px 13px;
     background: linear-gradient(to right, white, rgb(247, 255, 156));
-    color: rgb(21, 110, 21);
-    font-family: "Concert One", sans-serif;
+    border-radius: 5px;
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      color: rgb(21, 110, 21);
+      font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1.7rem, 4vw, 2.7rem);
-    border-radius: 5px;
+    }
   }
 }
 
@@ -654,17 +656,20 @@
 
 /* ================================= */
 .what-we-do {
-  h1 {
+  .heading-additions{
     text-align: center;
     padding: 70px 13px;
     background: linear-gradient(to right, white, rgb(247, 255, 156));
-    color: rgb(21, 110, 21);
-    font-family: "Concert One", sans-serif;
+    border-radius: 5px;
+    h1 {
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+      color: rgb(21, 110, 21);
+      font-family: "Concert One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1.7rem, 4vw, 2.7rem);
-    border-radius: 5px;
+    }
   }
+  
 }
 
 .video {

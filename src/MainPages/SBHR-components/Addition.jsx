@@ -13,7 +13,7 @@ const Addition = () => {
     })
   return (
     <div className='what-we-do'>
-        <h1 data-aos="fade-up">What We Do</h1>
+        <div className='heading-additions'><h1 data-aos="fade-up">What We Do</h1></div>
             <div className="video">
                 <div className="vd">
                     <video src={vdo1} muted autoPlay loop />

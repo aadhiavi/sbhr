@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Navbar from './Components/Navbar/Navbar';
@@ -16,11 +16,17 @@ import Dining from './MainPages/SBHR-components/Dining';
 import FormData from './Components/EnquiryForm/FormData';
 import Career from './MainPages/SBHR-components/Career';
 import Chat from './MainPages/Components/Chat';
+import { Overview, OverviewButton } from './Files/Store/Store';
 
 
 
 
 function App() {
+  const [open, setOpen] = useState(false)
+  const handleClick =()=>{
+      setOpen(!open)
+  }
+
   return (
     <>
       <Router>
@@ -53,6 +59,9 @@ function App() {
               <a href='https://maps.app.goo.gl/QLqdVP6Xxtbe3xsX8' target='_blank' rel='noopener noreferrer'>
                 <img style={{ width: '34px', height: '34px' }} src={maps} alt='Google Maps' />
               </a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" className="Overview-container">
+              {open ? <OverviewButton onClose={handleClick} /> : <Overview onClose={handleClick} />}
             </div>
           </div>
         </ScrollgToTop>

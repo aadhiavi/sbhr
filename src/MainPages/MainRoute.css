@@ -2,7 +2,7 @@
 
 .Overview-container{
     position: fixed;
-    top: 20%;
+    top: 110px;
     z-index: 99;
 }
 .heading-main {
@@ -82,10 +82,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.842);
     position: fixed;
     top: 60px;
-    z-index: 9;
+    z-index: 9999;
+}
+@media(max-width:1150px){
+    .SubNav {
+        background-color: rgba(0, 0, 0, 0.842);
+        z-index: 9;
+    }
 }
 
 /* ==========SBHR============ */
@@ -423,6 +428,15 @@
         }
     }
 
+    .HomeSliderVideo {
+        padding-top: 100px;
+        height: 70vh;
+        .down{
+            display: none;
+        }
+    }
+}
+@media(max-width:1150px) {
     .HomeSliderVideo {
         padding-top: 60px;
         height: 70vh;

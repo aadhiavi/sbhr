@@ -106,7 +106,9 @@ const Resorts = () => {
     })
     return (
         <div className='companiesList'>
+            <div className="heading-additions">
             <h1 data-aos="fade-up">Our Group of Hotels & Resorts</h1>
+            </div>
             <div className="companies">
                 <div className="info-images">
                     <img data-aos="fade-up" src={list[activeIndex].pic} alt="" />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../Assets/SBHR.jpg';
+import logo from '../../Assets/hr.png';
 import { TfiHome } from 'react-icons/tfi';
 import insta from '../../Assets/Instagram-Logo.wine.svg';
 import Facebook from '../../Assets/Facebook-f_Logo-Blue-Logo.wine.svg';
@@ -16,16 +16,16 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const [model, setModel] = useState(false)
+  const [model, setModel] = useState(false);
 
   const handleClickModel = () => {
     setModel(!model)
-
   }
 
   const handleClick = () => {
     setClick(!click);
   };
+
   const handleMenuItemClick = () => {
     setClick(false);
   };

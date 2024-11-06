@@ -296,8 +296,7 @@ const Chat = () => {
           <button onClick={sendMessage} className="send-button"><IoMdSend /></button>
         </div>
       </div>
-      <div data-aos="fade-up"
-     data-aos-duration="250" className={!visible ? "icon-chat-inactive" : "icon-chat"}>
+      <div className={!visible ? "icon-chat-inactive" : "icon-chat"}>
         <a style={{ color: 'blue' }} href='tel:+91-7793979849'>
           <IoMdCall />
         </a>
