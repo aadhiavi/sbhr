@@ -7,6 +7,8 @@ import chat from '../../Assets/chat.svg';
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoMdCall } from "react-icons/io";
 import bothead from '../../Assets/bothead.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Chat = () => {
   const [messages, setMessages] = useState([
@@ -251,12 +253,15 @@ const Chat = () => {
     scrollToBottom();
   }, [messages]);
 
+  useEffect(()=>{
+    AOS.init({duration:2000});
+})
   return (
     <div className="bot-container">
       <div className="bot-shortcut" onClick={handleClick}>
         {!visible ? <MdChat /> : <MdClose />}
       </div>
-      <div className={visible ? "chat-container" : 'chat-container-inactive'}>
+      <div data-aos="fade-up" data-aos-duration="200" className={visible ? "chat-container" : 'chat-container-inactive'}>
         <div className="chat-header">
           <div className='head-heading'><img src={bothead} alt="" /><h1>SBHR</h1></div>
           <p className="typing-indicator">{isTyping ? "Typing..." : "Active now"}</p>
@@ -291,7 +296,8 @@ const Chat = () => {
           <button onClick={sendMessage} className="send-button"><IoMdSend /></button>
         </div>
       </div>
-      <div className={!visible ? "icon-chat-inactive" : "icon-chat"}>
+      <div data-aos="fade-up"
+     data-aos-duration="250" className={!visible ? "icon-chat-inactive" : "icon-chat"}>
         <a style={{ color: 'blue' }} href='tel:+91-7793979849'>
           <IoMdCall />
         </a>

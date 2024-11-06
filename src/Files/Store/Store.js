@@ -1,8 +1,10 @@
 import { SectionBody } from "../../MainPages/Components/HomeBody";
-import { GunterStay, GunturDine, GunturEvents, HydDine, HydStay, HydEvents} from "../../MainPages/Components/HomeContent";
-import { GntrDineImages, GntrEveImages, GntrStayImages, HydDineImages, HydEveImages, HydStayImages} from "./ImagesStore";
+import { GunterStay, GunturDine, GunturEvents, HydDine, HydStay, HydEvents } from "../../MainPages/Components/HomeContent";
+import { GntrDineImages, GntrEveImages, GntrStayImages, HydDineImages, HydEveImages, HydStayImages } from "./ImagesStore";
 import '../../SubPages/SubRoute.css'
 import Footer from "../../Components/Footer/Footer";
+import { MdClose } from "react-icons/md";
+import { FaAngleRight } from "react-icons/fa6";
 
 
 export const SbhrFooter = {
@@ -133,3 +135,41 @@ export const weddingHalls = {
   },
 };
 
+
+export const Overview = ({onClose}) => {
+  return (
+    <div className="overview">
+      <span><MdClose onClick={onClose}/></span>
+      <ul>
+        <li>Large convention hall with capasity of 1000 people</li>
+        <li>Chapel with Mezzanine Floor capasity 100 to 200</li>
+        <li>Dining Hall, Open Dining Area with capasity of 600</li>
+        <li>Baptism Tank</li>
+        <li>Photoshoot Lawn</li>
+        <li>Large Parking Facilities upto 50 to 100 vehicles</li>
+        <li>Conference & Training Rooms with capasity of 100 </li>
+        <li>Open Theatre with capasity of 300 to 600</li>
+        <li>Recreation Pond</li>
+        
+      </ul>
+      <ul>
+      <li>Natural Garden</li>
+        <li> Executive Rooms - Double Occupancy</li>
+        <li>Luxury 2BHK</li>
+        <li>Delegates Rooms</li>
+        <li>4 Bedded Occupancy Rooms for Girls</li>
+        <li>4 Bedded Occupancy Rooms for Boy’s</li>
+        <li>8 bedded Occupancy Rooms</li>
+        <li>40 Bedded Occupancy Dormitory</li>
+      </ul>
+    </div>
+  )
+}
+
+export const OverviewButton = ({onClose})=>{
+  return(
+    <div className="overview-btn">
+      <button onClick={onClose}><FaAngleRight/></button>
+    </div>
+  )
+}

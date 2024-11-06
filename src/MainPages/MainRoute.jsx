@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation, NavLink } from 'react-router-dom';
 import SubRoute from '../SubPages/SubRoute';
 import './MainRoute.css';
@@ -7,10 +7,17 @@ import Guntur from './Components/Guntur';
 import Bangalore from './Components/Bangalore';
 import samaikya from '../Assets/gg.jpg'
 import sama from '../Assets/samadhana.jpg'
+import { Overview, OverviewButton } from '../Files/Store/Store';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const headings = ['Stay', 'Dine', 'Wedding&Events'];
 
 const MainRoute = ({ route }) => {
+    const [open, setOpen] = useState(false)
+    const handleClick =()=>{
+        setOpen(!open)
+    }
 
     const location = useLocation();
 
@@ -33,6 +40,31 @@ const MainRoute = ({ route }) => {
 
     const isSubRoute = headings.some(heading => location.pathname.endsWith(heading));
 
+    // useEffect(() => {
+    //     // Check if there's a saved state in localStorage
+    //     const savedState = localStorage.getItem("open");
+    //     if (savedState !== null) {
+    //       setOpen(JSON.parse(savedState));
+    //     }
+    //   }, []);
+    
+    //   useEffect(() => {
+    //     // Save the state to localStorage whenever `open` changes
+    //     localStorage.setItem("open", JSON.stringify(open));
+    
+    //     if (!open) {
+    //       // When open is set to false, wait 10 seconds and reopen automatically
+    //       const timer = setTimeout(() => {
+    //         setOpen(true);
+    //       }, 10000);
+    
+    //       return () => clearTimeout(timer); // Cleanup the timer on component unmount or open change
+    //     }
+    //   }, [open]);
+
+    useEffect(()=>{
+        AOS.init({duration:2000});
+    })
     return (
         <div>
             <nav className='SubNav'>
@@ -49,6 +81,9 @@ const MainRoute = ({ route }) => {
                 {!isSubRoute &&
                     <div className='main-image'>
                         <img src={introImage} alt="" />
+                        <div  data-aos="fade-up" className="Overview-container">
+                            {open ? <OverviewButton onClose={handleClick}/> :<Overview onClose={handleClick}/>}
+                        </div>
                     </div>
                 }
                 {!isSubRoute &&
