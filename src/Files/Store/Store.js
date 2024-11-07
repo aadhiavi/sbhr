@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 import { MdClose } from "react-icons/md";
 import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 
 export const SbhrFooter = {
@@ -137,35 +138,115 @@ export const weddingHalls = {
 };
 
 
-export const Overview = ({ onClose}) => {
+export const Overview = ({ onClose }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const pargraphStyles = {
+    WebkitLineClamp: 9,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+    display: '-webkit-box',
+
+  }
   return (
-    <div onClick={onClose} className="overview">
+    <div style={isOpen ? null : pargraphStyles} className="overview">
       <span><MdClose onClick={onClose} /></span>
-      <h3>Useful Links</h3>
+      <h3>We Have</h3>
       <ul>
-       <li><Link to='/event'>Convention Hall (1,000 people capacity)</Link></li> 
-       <li><Link to='/event'>Chapel with Mezzanine (100-200 capacity)</Link></li>
-       <li><Link to='/dining'>Dining Hall & Open Dining Area (600 capacity)</Link></li> 
-       <li>Baptism Tank</li>
-       <li>Photoshoot Lawn</li> 
-       <li>Large Parking (50-100 vehicles)</li>
-       <li><Link to='/event'>Conference & Training Rooms (100 capacity)</Link></li>
-       <li>Open Theatre (300-600 capacity)</li>
-       <li>Recreation Pond</li> 
-       <li>Natural Garden</li>
-       <li><Link to='/rooms'>Executive Rooms (Double Occupancy)</Link></li>
-       <li><Link to='/rooms'>Luxury 2BHK</Link></li>
-       <li><Link to='/rooms'>Delegate Rooms</Link></li>
-       <li><Link to='/rooms'>4-Bedded Rooms (Girls)</Link></li>
-       <li><Link to='/rooms'>4-Bedded Rooms (Boys)</Link></li>
-       <li><Link to='/rooms'>8-Bedded Rooms</Link></li>
-       <li><Link to='/rooms'>40-Bedded Dormitory</Link></li>
+        <li onClick={onClose}><Link to='/event'>Convention Halls</Link></li>
+        <li onClick={onClose}><Link to='/event'>Mezzanine Chapel</Link></li>
+        <li onClick={onClose}><Link to='/dining'>Indoor-Outdoor Dining</Link></li>
+        <li>Baptismal Pool</li>
+        <li> Photography Lawn</li>
+        <li>Ample Parking Facility</li>
+        <li onClick={onClose}><Link to='/event'>Conference & Training Rooms</Link></li>
+        <li>Outdoor Amphitheater</li>
+        <li>Recreation Pond</li>
+        <li>Natural Garden</li>
+        <li onClick={onClose}><Link to='/rooms'>Executive Rooms Suits</Link></li>
+        <li onClick={onClose}><Link to='/rooms'>Luxury-Bedrooms</Link></li>
+        <li onClick={onClose}><Link to='/rooms'>Delegate Rooms</Link></li>
+        <li onClick={onClose}><Link to='/rooms'>Shared Rooms with 4 Beds</Link></li>
+        <li onClick={onClose}><Link to='/rooms'>Shared Rooms with 8 Beds </Link></li>
+        <li onClick={onClose}><Link to='/rooms'>50-Bed Dormitory</Link></li>
       </ul>
+      <div className="overview-btn-btn" onClick={() => setIsOpen(!isOpen)}>
+        <Link>{isOpen ? 'Read less...' : 'Read More...'}</Link>
+      </div>
     </div>
   )
 }
 
 export const OverviewButton = ({ onClose }) => {
+  return (
+    <div className="overview-btn">
+      <button onClick={onClose}><FaAngleRight /></button>
+    </div>
+  )
+}
+
+export const OverviewHyd = ({ onClose }) => {
+  return (
+    <div className="overview">
+      <span><MdClose onClick={onClose} /></span>
+      <h3>Useful Links</h3>
+      <ul>
+        <li onClick={onClose}><Link to='/hyderabad/Wedding&Events'>Convention Hall - Capacity: 500 </Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Wedding&Events'>Mezzanine Chapel - Capacity: 100</Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Dine'>Dining Complex, Outdoor - Capacity: 600</Link></li>
+        <li>Baptismal Pool</li>
+        <li> Photography Lawn</li>
+        <li>Ample Parking Facility - Capacity: 300</li>
+        <li onClick={onClose}><Link to='/hyderabad/Wedding&Events'>Conference & Training Rooms - Capacity: 100</Link></li>
+        <li>Outdoor Amphitheater - Capacity: 300-600</li>
+        <li>Recreation Pond</li>
+        <li>Natural Garden</li>
+        <li onClick={onClose}><Link to='/hyderabad/Stay'>Executive Rooms Suits</Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Stay'>Luxury Two-Bedroom Apartments</Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Stay'>Delegate Rooms</Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Stay'>Shared Rooms with 4 Beds - for Girls & Boys</Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Stay'>Shared Rooms with 8 Beds </Link></li>
+        <li onClick={onClose}><Link to='/hyderabad/Stay'>40-Bed Dormitory</Link></li>
+      </ul>
+    </div>
+  )
+}
+
+export const OverviewButtonHyd = ({ onClose }) => {
+  return (
+    <div className="overview-btn">
+      <button onClick={onClose}><FaAngleRight /></button>
+    </div>
+  )
+}
+
+export const OverviewGntr = ({ onClose }) => {
+  return (
+    <div className="overview">
+      <span><MdClose onClick={onClose} /></span>
+      <h3>Useful Links</h3>
+      <ul>
+        <li onClick={onClose}><Link to='/guntur/Wedding&Events'>Convention Hall - Capacity: 3000 </Link></li>
+        <li onClick={onClose}><Link to='/guntur/Dine'>Dining Complex, Outdoor - Capacity: 1500</Link></li>
+        <li>Baptismal Pool</li>
+        <li> Photography Lawn</li>
+        <li>Ample Parking Facility - Capacity: 300</li>
+        <li onClick={onClose}><Link to='/guntur/Wedding&Events'>Conference & Training Rooms - Capacity: 30</Link></li>
+        <li onClick={onClose}><Link  to='/guntur/Wedding&Events'>Outdoor Amphitheater - Capacity: 1000</Link></li>
+        <li>Recreation Pond</li>
+        <li>Natural Garden</li>
+        <li onClick={onClose}><Link to='/guntur/Stay'>Executive Rooms Suits</Link></li>
+        <li onClick={onClose}><Link to='/guntur/Stay'>Luxury Two-Bedroom Apartments</Link></li>
+        <li onClick={onClose}><Link to='/guntur/Stay'>Delegate Rooms</Link></li>
+        <li onClick={onClose}><Link to='/guntur/Stay'>Shared Rooms with 4 Beds - for Girls & Boys</Link></li>
+        <li onClick={onClose}><Link to='/guntur/Stay'>Shared Rooms with 8 Beds </Link></li>
+        <li onClick={onClose}><Link to='/guntur/Stay'>50-Bed Dormitory</Link></li>
+      </ul>
+    </div>
+  )
+}
+
+export const OverviewButtonGntr = ({ onClose }) => {
   return (
     <div className="overview-btn">
       <button onClick={onClose}><FaAngleRight /></button>

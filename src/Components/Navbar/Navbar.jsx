@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../Assets/hr.png';
+import logo from '../../Assets/SBHR_LOGO_d3.png';
 import { TfiHome } from 'react-icons/tfi';
 import insta from '../../Assets/Instagram-Logo.wine.svg';
 import Facebook from '../../Assets/Facebook-f_Logo-Blue-Logo.wine.svg';

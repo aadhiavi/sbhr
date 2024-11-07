@@ -22,10 +22,6 @@ import { Overview, OverviewButton } from './Files/Store/Store';
 
 
 function App() {
-  const [open, setOpen] = useState(false)
-  const handleClick =()=>{
-      setOpen(!open)
-  }
 
   return (
     <>
@@ -53,15 +49,12 @@ function App() {
               <a href='https://www.instagram.com/samadhanasadan/' >
                 <img style={{ width: '38px', height: '38px' }} src={insta} alt='Instagram' />
               </a>
-              <a href='https://www.facebook.com/profile.php?id=61558738804342'>
+              <a href='https://www.facebook.com/profile.php?id=61567940714930'>
                 <img style={{ width: '37px', height: '37px' }} src={Facebook} alt='Facebook' />
               </a>
               <a href='https://maps.app.goo.gl/QLqdVP6Xxtbe3xsX8' target='_blank' rel='noopener noreferrer'>
                 <img style={{ width: '34px', height: '34px' }} src={maps} alt='Google Maps' />
               </a>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="1000" className="Overview-container">
-              {open ? <OverviewButton onClose={handleClick} /> : <Overview onClose={handleClick} />}
             </div>
           </div>
         </ScrollgToTop>

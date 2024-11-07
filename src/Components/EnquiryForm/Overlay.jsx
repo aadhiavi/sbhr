@@ -7,7 +7,7 @@ const Overlay = ({ message, onClose }) => {
         <div className="overlay-enquiry">
             <div className="overlay-content-msg">
                 <p>{message}</p>
-                <div className='close'><MdClose style={{ color: "white" }} size={25} onClick={onClose} /></div>
+                <div className='close'><MdClose style={{ color: "black" }} size={25} onClick={onClose} /></div>
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ const AdminPanel = () => {
         name: "",
         number: "",
         email: "",
-        city: "Select Place",  // Default city
+        city: "Select Place", 
         message: "",
         start: null,
         end: null
@@ -26,7 +26,7 @@ const AdminPanel = () => {
     const [submittedData, setSubmittedData] = useState([]);
     const [editingId, setEditingId] = useState(null);
     const [bookedDates, setBookedDates] = useState([]);
-    const [currentCity, setCurrentCity] = useState("Hyderabad");  // Default city
+    const [currentCity, setCurrentCity] = useState("Hyderabad");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -96,7 +96,7 @@ const AdminPanel = () => {
                 name: "",
                 number: "",
                 email: "",
-                city: currentCity,  // Reset to current city
+                city: currentCity, 
                 message: "",
                 start: null,
                 end: null

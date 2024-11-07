@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './MainRoute.css';
-import { dining, halls, open, rooms } from '../Files/Store/ImagesStore';
+import { dining, halls,open, rooms } from '../Files/Store/ImagesStore';
 import { Link } from 'react-router-dom';
 import MiniImageSlider from '../Files/ImageSlider/MiniImageSlider';
 import vd from '../Assets/vd7.mp4';
 import Op2 from '../Assets/Hyd/ss-tank (1).jpg';
 import Footer from '../Components/Footer/Footer';
-import { SbhrFooter } from '../Files/Store/Store';
+import { Overview, OverviewButton, SbhrFooter } from '../Files/Store/Store';
 import parking from '../Assets/par.jpg'
 import Addition from './SBHR-components/Addition';
 import Resorts from './SBHR-components/Resorts';
@@ -18,6 +18,10 @@ import 'aos/dist/aos.css';
 
 
 const SBHR = () => {
+    const [show, setShow] = useState(false)
+  const handleClick =()=>{
+      setShow(!show)
+  }
     const scrollToPosition = () => {
         window.scrollTo({
             top: 650,
@@ -36,6 +40,9 @@ const SBHR = () => {
                 <div onClick={scrollToPosition} className='down'>
                     <FaChevronDown className='down-arrow' />
                 </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="900" className="Overview-container">
+              {show ? <OverviewButton onClose={handleClick} /> : <Overview onClose={handleClick} />}
             </div>
 
             <div className='intro'>
@@ -77,8 +84,8 @@ const SBHR = () => {
                                 <MiniImageSlider images={halls} />
                             </div>
                             <div data-aos="fade-up" className='box-info'>
-                                <h3>Big Hall, Chappal, Meeting Room</h3>
-                                <p>Starting from <button>Rs:14,999 - 79,999. /-</button></p>
+                                <h3>Convention Hall, Chappal, Meeting Room</h3>
+                                <p>Starting from <button>Rs:19,999 - 79,999. /-</button></p>
                             </div>
                         </div>
                     </Link>
@@ -99,7 +106,7 @@ const SBHR = () => {
                         </div>
                         <div data-aos="fade-up" className='box-info'>
                             <h3>Outdoor Events,Lawn,Open Theatre</h3>
-                            <p>Starting from <button>Rs:000000/-</button></p>
+                            <p>Outdoor events like lawn parties and open theatres offer vibrant, natural experiences.</p>
                         </div>
                     </div>
                     <div className="box">

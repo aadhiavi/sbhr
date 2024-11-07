@@ -14,6 +14,7 @@ import Model from '../../Components/EnquiryForm/Model';
 import { Gntr, Hyd } from '../../Files/Store/ImagesStore';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaFilePdf } from 'react-icons/fa6';
 
 
 const Resorts = () => {
@@ -123,6 +124,7 @@ const Resorts = () => {
                     <div data-aos="fade-up" className='photo-video'>
                         <div onClick={handleClickModelGallary}><MdInsertPhoto /></div>
                         <div onClick={handleClickModelVideo}><FaFileVideo /></div>
+                        <a href="">Brochure</a>
                     </div>
                 </div>
 

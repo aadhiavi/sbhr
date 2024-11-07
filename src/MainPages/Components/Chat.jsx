@@ -13,7 +13,16 @@ import 'aos/dist/aos.css';
 const Chat = () => {
   const [messages, setMessages] = useState([
     { botResponse: "Welcome to Suhana Beulah Hotels & Resorts!" },
-    { botResponse: "Contact us: +91 7793979849, arthi@tradesyndicate.in" },
+    { botResponse: 
+      (
+        <ul>
+          <li>You can connect with us at</li>
+          <li>Phone: <a style={{textDecoration:'underline',color:'red'}} href='tel:+91 7793979849'>+91 7793979849</a></li>
+          <li>Email: <a style={{textDecoration:'underline',color:'red'}} href="mailto:arthi@tradesyndicate.in">arthi@tradesyndicate.in</a></li>
+          <li>We're here to help!</li>
+        </ul>
+      )
+     },
     { botResponse: "How can I assist you?" },
   ]);
   const [input, setInput] = useState('');
@@ -47,7 +56,6 @@ const Chat = () => {
     const bookingKeywords = ['booking', 'reserve', 'availability'];
     const cancellationKeywords = ['cancellation', 'refund', 'policy'];
 
-    // Handle greetings
     if (greetings.some(greet => message.toLowerCase().includes(greet))) {
       if (!userName) {
         return "Hi there! What's your name?";
@@ -56,23 +64,19 @@ const Chat = () => {
       }
     } 
 
-    // Handle name introduction
     else if (message.toLowerCase().startsWith('my name is ')) {
       userName = message.slice(11).trim();
       return `Nice to meet you, ${userName}! What information are you looking for?`;
     }
 
-    // Handle hotel inquiries
     else if (hotelInquiryKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return "We offer two beautiful venues: Samadhana Sadhan in Hyderabad and Samaikyatha Sadhan in Guntur. What specific information are you looking for?";
     }
 
-    // Handle retreat inquiries
     else if (retreatKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return "Both venues are designed for retreats, accommodating groups from 10 to 1,000 people, with lodging, recreational activities, and expert coordinators.";
     }
 
-    // Handle room inquiries
     else if (roomKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -80,11 +84,11 @@ const Chat = () => {
           <li><strong>Luxury 2 BHK Accommodations</strong>: Separate bedrooms and kitchenette for families or groups.</li>
           <li><strong>4-bedded and 8-bedded Rooms</strong>: Ideal for smaller groups.</li>
           <li><strong>40-bedded Dorms</strong>: Great for retreats or youth camps.</li>
+          <li> <a style={{textDecoration:'underline',color:'red'}} href="/rooms">See more...</a></li>
         </ul>
       );
     }
 
-    // Handle facility inquiries
     else if (facilityKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -95,7 +99,6 @@ const Chat = () => {
       );
     }
 
-    // Handle dining inquiries
     else if (diningKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -103,29 +106,31 @@ const Chat = () => {
           <li>A diverse menu featuring local dishes like Hyderabadi Dum Biryani.</li>
           <li>Customizable menus for dietary restrictions.</li>
           <li>Catering services for outdoor events.</li>
+          <li><a style={{textDecoration:'underline',color:'red'}} href="/dining">See more...</a></li>
         </ul>
       );
     }
 
-    // Handle event inquiries
     else if (eventKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
-          <li>We have a stunning wedding and convention hall for large events, accommodating up to 1,000 guests.</li>
+          <li>We have a stunning Wedding and <strong>Convention hall</strong> for large events, accommodating up to 1,000 guests.</li>
           <li><strong>Chapel Meeting Space</strong>: Seats up to 100 guests for intimate gatherings.</li>
-          <li>Conference rooms equipped with high-speed Wi-Fi and projection screens.</li>
+          <li><strong>Conference rooms</strong> equipped with high-speed Wi-Fi and projection screens. <a style={{textDecoration:'underline',color:'red'}} href="/event">See More</a></li>
         </ul>
       );
     }
 
-    // Handle individual resort details
     else if (samadhanaKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
           <li><strong>Samadhana Sadhan</strong>:</li>
-          <li>Location: Ponallu Village, Shameerpet, Medchal-Malkajgiri district, Hyderabad 500078</li>
+          <li>Location: <a style={{textDecoration:'underline',color:'red'}} href="https://maps.app.goo.gl/wp3v8rnGhKWAS9V29">Ponallu Village, Shameerpet, Medchal-Malkajgiri district, Hyderabad 500078</a></li>
           <li>Capacity: Accommodates groups from 10 to 1,000 people</li>
           <li>Facilities: Comfortable lodging, recreational activities, and expert event coordinators.</li>
+          <li>Phone: <a style={{textDecoration:'underline',color:'red'}} href='tel:+91 7793979849'>+91 7793979849</a></li>
+          <li>Email: <a style={{textDecoration:'underline',color:'red'}} href="mailto:arthi@tradesyndicate.in">arthi@tradesyndicate.in</a></li>
+          <li><a style={{textDecoration:'underline',color:'blue'}} href="/hyderabad">See more...</a></li>
         </ul>
       );
     }
@@ -134,35 +139,42 @@ const Chat = () => {
       return (
         <ul>
           <li><strong>Samaikyatha Sadhan</strong>:</li>
-          <li>Location: 782C+F2J, Opposite St. ANN'S COLLEGE OF NURSING COLLEGE, Chowdavaram, Andhra Pradesh 522529</li>
+          <li>Location: <a style={{textDecoration:'underline',color:'red'}} href="https://maps.app.goo.gl/SHgHaUJjXuVBF7cz7">782C+F2J, Opposite St. ANN'S COLLEGE OF NURSING COLLEGE, Chowdavaram, Andhra Pradesh 522529</a> </li>
           <li>Capacity: Ideal for large gatherings and events</li>
           <li>Facilities: Spacious halls, dining area, and outdoor spaces for events.</li>
+          <li>Phone: <a style={{textDecoration:'underline',color:'red'}} href='tel:+91 9347905709'>+91 9347905709</a></li>
+          <li>Email: <a style={{textDecoration:'underline',color:'red'}} href="mailto:samaikyathasadan@gmail.com">samaikyathasadan@gmail.com</a></li>
+          <li><a style={{textDecoration:'underline',color:'blue'}} href="/guntur">See more...</a></li>
         </ul>
       );
     }
 
-    // Handle contact inquiries
     else if (contactKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
-      return "You can connect with us at phone: +91 7793979849 email: sbhrhyd@gmail.com. We're here to help!";
+      return(
+        <ul>
+          <li>You can connect with us at</li>
+          <li>Phone: <a style={{textDecoration:'underline',color:'red'}} href='tel:+91 7793979849'>+91 7793979849</a></li>
+          <li>Email: <a style={{textDecoration:'underline',color:'red'}} href="mailto:arthi@tradesyndicate.in">arthi@tradesyndicate.in</a></li>
+          <li>We're here to help!</li>
+        </ul>
+      )
     }
 
-    // Handle address inquiries
     else if (addressKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
-          <li><strong>Head Office</strong>: Plot No 128, Gate Number 6, Sitaram Nagar, Gunrock Enclave, Secunderabad, Telangana 500009</li>
-          <li><strong>Samadhana Sadhan</strong>: Ponallu Village, Shameerpet, Medchal-Malkajgiri district, Hyderabad 500078</li>
-          <li><strong>Samaikyatha Sadhan</strong>: 782C+F2J, Opposite St. ANN'S COLLEGE OF NURSING COLLEGE, Chowdavaram, Andhra Pradesh 522529</li>
+          <li>Here is Addresses with Map Links</li>
+          <li><strong>Head Office</strong>: <a style={{textDecoration:'underline',color:'red'}} href="https://maps.app.goo.gl/ekJ5NjkqTk3cxztXA"> Plot No 128, Gate Number 6, Sitaram Nagar, Gunrock Enclave, Secunderabad, Telangana 500009</a></li>
+          <li><strong>Samadhana Sadhan</strong>: <a style={{textDecoration:'underline',color:'red'}} href="https://maps.app.goo.gl/wp3v8rnGhKWAS9V29">Ponnal Village, Shameerpet, Medchal-Malkajgiri district, Hyderabad 500078</a> </li>
+          <li><strong>Samaikyatha Sadhan</strong>: <a style={{textDecoration:'underline',color:'red'}} href="https://maps.app.goo.gl/SHgHaUJjXuVBF7cz7">782C+F2J, Opposite St. ANN'S COLLEGE OF NURSING COLLEGE, Chowdavaram, Andhra Pradesh 522529</a> </li>
         </ul>
       );
     }
 
-    // Handle farewells
     else if (farewellKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return `Goodbye ${userName || ''}! We look forward to assisting you again!`;
     }
 
-    // Handle amenities inquiries
     else if (amenitiesKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -174,7 +186,6 @@ const Chat = () => {
       );
     }
 
-    // Handle activities inquiries
     else if (activitiesKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -185,7 +196,6 @@ const Chat = () => {
       );
     }
 
-    // Handle pricing inquiries
     else if (pricingKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -197,18 +207,15 @@ const Chat = () => {
       );
     }
 
-    // Handle booking process inquiries
     else if (bookingKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
-          <li>You can book through our website or call us directly.</li>
+          <li>For Bookings call us directly.</li>
           <li>For group bookings, please contact us for personalized service.</li>
-          <li>Check-in time is 2 PM, and check-out time is 11 AM.</li>
         </ul>
       );
     }
 
-    // Handle cancellation policy inquiries
     else if (cancellationKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return (
         <ul>
@@ -218,7 +225,6 @@ const Chat = () => {
       );
     }
 
-    // Default response for unrecognized input
     return `Sorry, I didn't quite understand this "${message}". Could you please explain it in more detail?`; 
   };
 
