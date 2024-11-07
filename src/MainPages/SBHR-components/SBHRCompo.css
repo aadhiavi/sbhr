@@ -1,9 +1,11 @@
 .slideshow {
   height: 100vh;
-  padding-top: 60px;
+  padding-top: 100px;
+  margin: 0 auto;
 }
 
 .fecilities {
+  margin: 0 200px;
   padding: 30px 10px;
 
   h2 {
@@ -46,14 +48,25 @@
     font-size: 0.9rem;
   }
 }
+@media (max-width: 1150px) {
+  .slideshow {
+    height: 80vh;
+    padding-top: 60px;
+  }
+  
+  .fecilities {
+    margin: 0 100px;
+  }
+}
 
 @media (max-width: 768px) {
   .slideshow {
     height: 70vh;
+   
   }
 
   .fecilities {
-
+    margin: 0;
     h2 {
       font-size: 1.5rem;
     }
@@ -78,101 +91,6 @@
   }
 }
 
-/* ==================== */
-
-.halls-container {
-  padding: 20px;
-  background-color: #f9f9f9;
-  max-width: 100%;
-  margin: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 10vh;
-}
-
-.hall-section {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-.hall-section h2 {
-  font-size: 1.8em;
-  color: #333;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e2e2e2;
-  padding-bottom: 10px;
-}
-
-.hall-section img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #e2e2e2;
-}
-
-.hall-section h3 {
-  font-size: 1.3em;
-  color: #555;
-  margin-top: 20px;
-}
-
-.hall-section p {
-  font-size: 1em;
-  line-height: 1.8;
-  color: #666;
-}
-
-
-.additional-tips {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-
-.additional-tips h2 {
-  font-size: 1.8em;
-  color: #333;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e2e2e2;
-  padding-bottom: 10px;
-}
-
-.additional-tips ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.additional-tips li {
-  font-size: 1em;
-  line-height: 1.8;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-
-@media (max-width: 768px) {
-  .hall-section img {
-    max-width: 100%;
-  }
-
-  .hall-section h2,
-  .hall-section h3,
-  .additional-tips h2 {
-    font-size: 1.4em;
-  }
-
-  .hall-section p,
-  .additional-tips li {
-    font-size: 0.9em;
-  }
-}
 
 
 
@@ -216,7 +134,6 @@
   justify-content: space-between;
   flex-direction: column;
   gap: 10px;
-  /* border: 1px solid rgba(255, 0, 0, 0.23); */
 
   .add-info {
     max-width: 400px;
