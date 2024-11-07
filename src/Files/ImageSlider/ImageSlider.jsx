@@ -24,7 +24,7 @@ const ImageSlider = ({ images }) => {
     <div className="slider">
       <button className='btn' onClick={prevSlide}><FaChevronLeft /></button>
       <div className="slider-images">
-        <img src={images[currentIndex]} alt="Slide" />
+        <img style={{height:'100%',width:'100%',objectFit:'cover'}} src={images[currentIndex]} alt="Slide" />
       </div>
       <button className='btn' onClick={nextSlide}><FaChevronRight /></button>
     </div>
