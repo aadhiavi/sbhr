@@ -39,6 +39,7 @@ export const stayDetails = {
   hyderabad: {
     description:
       <div className="top">
+        <div className="padding-top"></div>
         <SectionBody images={HydStayImages[0]} content={HydStay[0].content} />
         <SectionBody images={HydStayImages[1]} content={HydStay[1].content} />
         <SectionBody images={HydStayImages[2]} content={HydStay[2].content} />
@@ -54,6 +55,7 @@ export const stayDetails = {
   guntur: {
     description:
       <div className="top">
+        <div className="padding-top"></div>
         <SectionBody images={GntrStayImages[0]} content={GunterStay[0].content} />
         <SectionBody images={GntrStayImages[1]} content={GunterStay[1].content} />
         <SectionBody images={GntrStayImages[2]} content={GunterStay[2].content} />
@@ -76,6 +78,7 @@ export const dineDetails = {
   hyderabad: {
     description:
       <div className="top">
+        <div className="padding-top"></div>
         <SectionBody images={HydDineImages[0]} content={HydDine[0].content} />
         <SectionBody images={HydDineImages[1]} content={HydDine[1].content} />
         <SectionBody images={HydDineImages[2]} content={HydDine[2].content} />
@@ -91,6 +94,7 @@ export const dineDetails = {
   guntur: {
     description:
       <div className="top">
+        <div className="padding-top"></div>
         <SectionBody images={GntrDineImages[0]} content={GunturDine[0].content} />
         <SectionBody images={GntrDineImages[1]} content={GunturDine[2].content} />
         <Footer {...GntrFooter} />
@@ -108,6 +112,7 @@ export const weddingHalls = {
   hyderabad: {
     description:
       <div className="top">
+        <div className="padding-top"></div>
         <SectionBody images={HydEveImages[0]} content={HydEvents[0].content} />
         <SectionBody images={HydEveImages[1]} content={HydEvents[1].content} />
         <SectionBody images={HydEveImages[2]} content={HydEvents[2].content} />
@@ -123,6 +128,7 @@ export const weddingHalls = {
   guntur: {
     description:
       <div className="top">
+        <div className="padding-top"></div>
         <SectionBody images={GntrEveImages[0]} content={GunturEvents[0].content} />
         <SectionBody images={GntrEveImages[1]} content={GunturEvents[1].content} />
         <SectionBody images={GntrEveImages[2]} content={GunturEvents[2].content} />
@@ -180,7 +186,7 @@ export const Overview = ({ onClose }) => {
 export const OverviewButton = ({ onClose }) => {
   return (
     <div className="overview-btn">
-      <button onClick={onClose}><FaAngleRight /></button>
+      <button onClick={onClose}><FaAngleRight className="overview-btn-btn-btn"/></button>
     </div>
   )
 }

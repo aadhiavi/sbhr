@@ -1,48 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import './MainRoute.css';
-import { dining, halls,open, rooms } from '../Files/Store/ImagesStore';
+import { dining, halls, open, rooms } from '../Files/Store/ImagesStore';
 import { Link } from 'react-router-dom';
 import MiniImageSlider from '../Files/ImageSlider/MiniImageSlider';
-import vd from '../Assets/vd7.mp4';
+import vd from '../Assets/SBHR Group.mp4';
 import Op2 from '../Assets/Hyd/ss-tank (1).jpg';
 import Footer from '../Components/Footer/Footer';
 import { Overview, OverviewButton, SbhrFooter } from '../Files/Store/Store';
 import parking from '../Assets/par.jpg'
 import Addition from './SBHR-components/Addition';
 import Resorts from './SBHR-components/Resorts';
-import { FaChevronDown } from "react-icons/fa6";
 import Testimonies from './SBHR-components/Testimonies';
 import Aments from './SBHR-components/Aments';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import sama from '../Assets/Hyd/eve/eve101.jpg'
+
 
 
 const SBHR = () => {
     const [show, setShow] = useState(false)
-  const handleClick =()=>{
-      setShow(!show)
-  }
-    const scrollToPosition = () => {
-        window.scrollTo({
-            top: 650,
-            behavior: 'smooth',
-        });
-    };
-    
-    useEffect(()=>{
-        AOS.init({duration:2000});
+    const handleClick = () => {
+        setShow(!show)
+    }
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 });
     })
 
     return (
         <div className='home'>
             <div className="HomeSliderVideo">
-                <video src={vd} muted autoPlay loop />
-                <div onClick={scrollToPosition} className='down'>
-                    <FaChevronDown className='down-arrow' />
-                </div>
+                <video controls preload="auto" poster={sama} width="720">
+                    <source src={vd} type="video/mp4"/>
+                </video>
             </div>
             <div data-aos="fade-up" data-aos-duration="900" className="Overview-container">
-              {show ? <OverviewButton onClose={handleClick} /> : <Overview onClose={handleClick} />}
+                {show ? <OverviewButton  onClose={handleClick} /> : <Overview onClose={handleClick} />}
             </div>
 
             <div className='intro'>
@@ -56,7 +50,7 @@ const SBHR = () => {
                 <div className="map-view">
                     <iframe title='map' src="https://www.google.com/maps/d/u/0/embed?mid=1bRGssm0-lqKDyt4zS3ugDkxAgGDuhx4&ehbc=2E312F&noprof=1" ></iframe>
                 </div>
-                <div  className="branches">
+                <div className="branches">
                     <h2 data-aos="fade-up">Our Promise</h2>
                     <p data-aos="fade-up">Discover our stunning beachfront resorts, versatile convention halls, and enchanting hill station retreats, where luxury and functionality converge. Our beachfront resorts offer serene getaways with breathtaking ocean views, modern amenities, and recreational activities for relaxation. The hill station locations provide a refreshing escape with cool breezes and picturesque landscapes, perfect for nature lovers. Meanwhile, our convention halls feature state-of-the-art technology and customizable spaces, ideal for any event. With professional support and exceptional catering, we ensure every detail is covered. Experience the perfect backdrop for your next escape or gathering with us!</p>
                 </div>
@@ -129,7 +123,7 @@ const SBHR = () => {
                     </div>
                 </div>
             </div>
-            <Aments/>
+            <Aments />
             <Testimonies />
             <Footer {...SbhrFooter} />
         </div>

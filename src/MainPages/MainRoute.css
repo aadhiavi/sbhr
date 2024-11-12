@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
 
-.Overview-container{
+.Overview-container {
     position: fixed;
     top: 110px;
     z-index: 99;
+    .shaking{
+        animation: shake 1s ease-in-out infinite;
+    }
 }
+
 .heading-main {
     width: 100%;
     height: 100%;
@@ -24,10 +28,14 @@
         margin-bottom: 20px;
         padding: 0 0 15px 0;
         border-bottom: 2px solid rgb(85, 85, 85);
-        color: rgb(0, 209, 0);
+        background-image: linear-gradient(to right, white, rgb(251, 255, 212), rgb(234, 255, 2));
+        -webkit-background-clip: text !important;
+        color: transparent;
         font-family: "Concert One", sans-serif;
         font-weight: 400;
         font-style: normal;
+        position: relative;
+        overflow: hidden;
     }
 
     p {
@@ -50,12 +58,12 @@
 
             a {
                 color: white;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 500;
             }
 
             a.active {
-                color: rgb(235, 156, 66);
+                color: rgb(0, 0, 0);
                 position: relative;
                 width: max-content;
                 padding: 5px 0;
@@ -67,29 +75,43 @@
                 position: absolute;
                 width: 100%;
                 bottom: 0;
-                left: 0;
-                height: 3px;
-                border-radius: 20px;
-                background-color: white;
+                left: -6px;
+                height: 19px;
+                padding: 4px 6px;
+                background-color: rgb(255, 255, 255);
                 transition: 150ms;
+                z-index: -1;
+                border-radius: 3px;
             }
         }
     }
 }
 
 .SubNav {
-    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     position: fixed;
-    top: 60px;
+    top: 38px;
+    margin-left: 306px;
     z-index: 9999;
 }
-@media(max-width:1150px){
+
+@media(max-width:1150px) {
     .SubNav {
-        background-color: rgba(0, 0, 0, 0.842);
-        z-index: 9;
+        margin-left: 260px;
+        top: 10px;
+        z-index: 9999;
+    }
+}
+
+@media(max-width:600px) {
+    .SubNav {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        top:58px;
+        z-index: 9999;
+        background-color: #047960;
     }
 }
 
@@ -145,53 +167,11 @@
 .HomeSliderVideo {
     height: 100vh;
     position: relative;
-    
 
     video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-    .dotted{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-image: radial-gradient(black 10%, transparent 10%);
-        background-size: 5px 5px;
-    }
-    .down{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 70px;
-        width: 70px;
-        border-radius: 50%;
-        border: 1px solid rgb(255, 255, 255);
-        background: rgba(255, 255, 255, 0.548);
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 27px;
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-        .down-arrow{
-            animation: shake 1.5s infinite;
-        }
-    }
-}
-@keyframes shake {
-    0% {
-        transform: translateY(-3px);
-    }
-    50% {
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(-3px);
     }
 }
 
@@ -215,6 +195,7 @@
 
         .map-view {
             height: 500px;
+
             iframe {
                 border: none;
                 outline: none;
@@ -235,13 +216,12 @@
             }
         }
     }
-    
+
 }
 
 @media(max-width:768px) {
     .main-image {
-        padding-top: 100px;
-        height: 400px;
+        height: 500px;
 
         img {
             height: 100%;
@@ -270,6 +250,19 @@
         p {
             color: rgba(0, 0, 0, 0.774);
 
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .main-image {
+        padding-top: 93px;
+        height: 400px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
@@ -429,18 +422,19 @@
     }
 
     .HomeSliderVideo {
-        padding-top: 100px;
-        height: 70vh;
-        .down{
+        height: 72vh;
+
+        .down {
             display: none;
         }
     }
 }
+
 @media(max-width:1150px) {
     .HomeSliderVideo {
-        padding-top: 60px;
         height: 70vh;
-        .down{
+
+        .down {
             display: none;
         }
     }
@@ -449,6 +443,10 @@
 @media(max-width:900px) {
     .HomeSliderVideo {
         height: 50vh;
+
+        .down {
+            display: none;
+        }
     }
 
     .heading-main {
@@ -464,6 +462,18 @@
     .grid-box {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+@media(max-width:600px) {
+    .HomeSliderVideo {
+        padding-top: 60px;
+        height: 60vh;
+
+        .down {
+            display: none;
+        }
+    }
+
 }
 
 @media(max-width:500px) {
@@ -490,6 +500,7 @@
         }
     }
 
+
 }
 
 /* ===============Home Body================ */
@@ -500,7 +511,6 @@
     gap: 50px;
     padding: 30px 0;
     background: linear-gradient(to right, white, white, rgb(251, 255, 212), rgb(247, 255, 156));
-    box-shadow: 10px 1px 15px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid grey;
 
     .image-section-slider {
@@ -564,7 +574,6 @@
     justify-content: flex-end;
     gap: 50px;
     background: linear-gradient(to right, rgb(247, 255, 156), white);
-    box-shadow: 10px 1px 15px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid grey;
 
     .image-section-slider {
@@ -629,7 +638,6 @@
     gap: 50px;
     padding: 30px 0;
     background: linear-gradient(to right, white, white, rgb(251, 255, 212), rgb(247, 255, 156));
-    box-shadow: 10px 1px 15px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid grey;
 
     .image-section-slider {

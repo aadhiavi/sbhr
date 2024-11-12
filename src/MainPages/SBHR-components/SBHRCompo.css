@@ -1,6 +1,5 @@
 .slideshow {
   height: 100vh;
-  padding-top: 100px;
   margin: 0 auto;
 }
 
@@ -51,7 +50,6 @@
 @media (max-width: 1150px) {
   .slideshow {
     height: 80vh;
-    padding-top: 60px;
   }
   
   .fecilities {
@@ -73,6 +71,13 @@
     h3{
       font-size: 1.3;
     }
+  }
+}
+@media (max-width: 600px) {
+  .slideshow {
+    padding-top: 60px;
+    height: 70vh;
+   
   }
 }
 @media (max-width: 400px) {
@@ -649,7 +654,8 @@
 /* --------------------careers------------------- */
 
 .career-card {
-  padding-top: 80px;
+  padding-top: 50px;
+  background-color: rgb(189,231,251);
 }
 
 .career {
@@ -658,7 +664,7 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, rgba(229, 229, 229, 0.597), rgba(218, 218, 218, 0.23));
+  background-color: white;
 
   h1 {
     font-size: 22px;
@@ -990,3 +996,4 @@
     }
   }
 }
+

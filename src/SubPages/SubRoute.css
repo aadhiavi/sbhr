@@ -1,6 +1,9 @@
 .top {
-    margin-top: 100px;
-
+.padding-top{
+    height: 80px;
+    width: 100%;
+    background: linear-gradient(to right, white, white, rgb(251, 255, 212), rgb(247, 255, 156));
+}
 }
 
 .section {
@@ -154,12 +157,12 @@
 
 .overview-btn {
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 20%;
 
     button {
         height: 37px;
-        width: 37px;
+        width: 40px;
         border-radius: 0 25px 25px 0;
         border: none;
         outline: none;
@@ -168,5 +171,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+        
+        .overview-btn-btn-btn{
+            animation: shake 1s ease-in-out infinite;
+        }
+    }
+}
+@keyframes shake {
+    0% {
+        transform: translateX(-3px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(-3px);
     }
 }
